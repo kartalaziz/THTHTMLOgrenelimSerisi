@@ -1,0 +1,96 @@
+<html>
+
+<body>
+
+    <p>THT'den bir alıntı:</p>
+    <blockquote cite="https://www.turkhackteam.org/">
+    2002 yılında kurulan THT Türkiye'nin en büyük siber güvenlik forumudur.
+    </blockquote>
+
+</body>
+
+</html>
+<!-- blockquote -->
+
+<html>
+
+<body>
+
+    <p>Green Team'in hedefi: <q>Kaliteli eğitici içerikler üretmek.</q></p>
+
+
+</body>
+
+</html>
+
+<!-- <q> -->
+
+<html>
+
+<body>
+
+<p>Green Team'in hedefi: <q>Kaliteli eğitici içerikler üretmek.</q></p>
+
+
+</body>
+
+</html>
+
+<!-- <q> -->
+
+<html>
+
+<body>
+
+    <p> #GreenTeam içeriği - <abbr title="Türk Hack Team">THT</abbr> 2002 yılında kurulmuştur.</p>
+
+
+</body>
+
+</html>
+
+<!-- <abbr> -->
+
+<html>
+
+<body>
+
+    <p> Merhaba ben vancoondehni</p>
+    <address>
+        Written by vancoondehni<br>
+        Visit us at:"https://www.turkhackteam.org/"<br>
+        TR
+        </address>
+
+</body>
+
+</html>
+
+<!-- <address> -->
+
+<html>
+
+<body>
+
+    <p><cite>Gülpembe</cite> 1991 yılında Barış Manço tarafından çıkartılmış bir şarkıdır.</p>
+
+
+</body>
+
+</html>
+
+<!-- <cite> -->
+
+<html>
+
+<body>
+
+    <bdo dir="rtl">Bu metin sağdan sola doğru yazılacaktır.</bdo>
+
+
+</body>
+
+</html>
+
+<!-- <bdo> -->
+

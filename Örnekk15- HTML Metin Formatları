@@ -1,0 +1,21 @@
+<html>
+
+<body>
+<p> Green Team - vancoondehni - Aziz </p>
+<p> <b>    Bold text(kalın metin) </b>
+    <em> Emphasized text(vurgulanmış metin) </em>
+    <i>     Italic text(italik metin)</i>
+    <small>    Smaller text(daha küçük metin) </small>
+    <strong> Important text(önemli metin) </strong>
+    <sub>    Subscript text(alt simge metni) </sub>
+    <sup>    Superscript text(üst simge metni) </sup>
+    <ins>     Inserted text(eklenen metin) </ins>
+    <del>     Deleted text(silinmiş metin) </del>
+    <mark>   Marked text(işaretlenmiş metin) </mark>
+
+
+    </p>
+
+</body>
+
+</html>

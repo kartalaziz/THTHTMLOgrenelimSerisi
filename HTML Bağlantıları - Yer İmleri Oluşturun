@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p><a href="#C10">10. Bölüme atlamak için tıklayınız</a></p>
+
+<h2>Bölüm 1</h2>
+<p>Merhaba</p>
+
+<h2>Bölüm 2</h2>
+<p>THT</p>
+
+<h2>Bölüm 3</h2>
+<p>Ben</p>
+
+<h2 id="C4">Bölüm 4</h2>
+<p>Aziz</p>
+
+<h2>Bölüm 5</h2>
+<p>Bu da HTML Öğrenelim Serisi</p>
+
+<h2>Bölüm 6</h2>
+<p>Serinin 6. bölümü</p>
+
+<h2>Bölüm 7</h2>
+<p>Konumuz bağlantılar</p>
+
+<h2>Bölüm 8</h2>
+<p>Bağlantılara yer imleri ekleme</p>
+
+<h2>Bölüm 9</h2>
+<p> ba bla bla</p>
+
+<h2 id="C10">Bölüm 10</h2>
+<p>ba bla bla</p>
+
+<h2>Bölüm 11</h2>
+<p> ba bla bla</p>
+
+<h2>Bölüm 12</h2>
+<p> ba bla bla</p>
+
+<h2>Bölüm 13</h2>
+<p> ba bla bla</p>
+
+<h2>Bölüm 14</h2>
+<p> ba bla bla</p>
+
+<h2>Bölüm 15</h2>
+<p>ba bla bla</p>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Görsellerin Bağlantı Olarak Kullanılması</h2>
+
+<p>Aşağıdaki görsel bir bağlantıdır. Görmek için tıklayınız.</p>
+
+<a href="default.asp"><img src="smiley.gif" alt="HTML Öğrenelim - THT" style="width:42px;height:42px;"></a>
+
+</body>
+</html>

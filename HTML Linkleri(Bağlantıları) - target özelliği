@@ -1,0 +1,13 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>target özelliği    </h2>
+
+<a href="turkhackteam.org" target="_blank">THT'yi karşılayın.</a>
+
+<p>Eğer target="_blank", ise bağlantı yeni bir tarayıcı penceresinde veya sekmesinde açılacaktır.</p>
+
+</body>
+</html>

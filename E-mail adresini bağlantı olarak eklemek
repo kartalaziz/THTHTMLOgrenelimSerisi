@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>E-mail adresini bağlantı olarak eklemek
+
+</h2>
+
+<p>Kullanıcının yeni bir e-posta göndermesine izin vermek için bir bağlantı oluşturmak istiyorsak href özelliğinin içinde mailto: ifadesi kullanılır.
+
+</p>
+
+<p><a href="mailto:selamınaleykümtht@gmail.com">Mail Gönder</a></p>
+
+</body>
+</html>

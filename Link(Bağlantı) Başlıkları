@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en-TR">
+<body>
+
+<h2>Link Başlıkları</h2>
+<p>title özelliği bir element hakkında ekstradan bilgi sağlamak için kullanılır. Bu bilgiler genellikle mouse üzerine geldiğinde ipucu metni olarak gösterilir..</p>
+<a href="https://www.turkhackteam.org" title="THT">Türk Hack Team'i ziyaret edin.</a>
+
+</body>
+</html>

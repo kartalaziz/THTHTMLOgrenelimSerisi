@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Butonları Bağlantı(Link) Olarak Kullanmak</h2>
+
+<p>Türk Hack Team'e ulaşmak için tıklayınız.</p>
+
+<button onclick="document.location='https://www.turkhackteam.org/'">HTML Öğrenelim - Green Team - vancoondehni</button>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Görsel Boyutu</h2>
+
+<p>Görselin genişliğini ve yüksekliğini değiştirmek için style özelliğinin width ve height eklentilerini kullanıyoruz.
+
+</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Ataturk1930s.jpg" alt="Atatürk" width="500" height="600">
+
+</body>
+</html>

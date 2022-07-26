@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Alternatif metin</h2>
+
+<p>Alt özelliği, görsel içeriğini metin halinde yansıtmalıdır, böylece görseli göremeyen kullanıcılar görselin ne içerdiğini okuyarak anlar:</p>
+
+<img src="https://i.hizliresim.com/c5awiw0.jpg" alt="Green Team" width="460" height="345">
+
+</body>
+</html>

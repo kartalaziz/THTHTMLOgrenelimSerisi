@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-image: url('img_girl.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<h2>Arka Plan Kapağı
+
+</h2>
+
+<p>Arka plan görüntüsünün tüm öğeyi kaplamasını istiyorsanız, background-size özelliğini cover şekilde ayarlayabilirsiniz.
+
+Ayrıca, tüm öğenin her zaman kapsandığından emin olmak için background-attachment özelliğini fixed olarak ayarlayın.
+Bu şekilde, arka plan görüntüsü, herhangi bir esneme olmaksızın tüm öğeyi kaplayacaktır (görüntü orijinal orantılarını koruyacaktır).</p>
+
+</body>
+</html>

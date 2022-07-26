@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Arkaplan Görselleri</h2>
+
+<p>p elementi için bir arka plan:</p>
+
+<p style="background-image: url('https://www.turkhackteam.org/styles/v1/tht/logo.png');">
+Arka plan görsellerini belirtebilirsiniz.<br>
+Bu örnekte, arka plan görseli<br>
+bir p elementi için belirlendi.<br>
+Arka plan varsayılan olarak<br>
+aynı yönde tekrar edecek<br>
+
+</p>
+
+</body>
+</html>

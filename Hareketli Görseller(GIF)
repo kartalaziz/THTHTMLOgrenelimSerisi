@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Hareketli Görseller</h2>
+
+<p>HTML hareketli görsellere(GIF'lere) izin verir.
+
+</p>
+
+<img src="programming.gif" alt="Computer man" style="width:111px;height:111px;">
+
+</body>
+</html>

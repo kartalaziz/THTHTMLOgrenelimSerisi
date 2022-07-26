@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-image: url('example_img_girl.jpg');
+}
+</style>
+</head>
+<body>
+
+<h2>Arka plan Tekrarı</h2>
+
+<p>Arka plan görüntüsü öğeden daha küçükse, görüntü öğenin sonuna ulaşana kadar yatay ve dikey olarak kendini tekrar eder.</p>
+
+</body>
+</html>

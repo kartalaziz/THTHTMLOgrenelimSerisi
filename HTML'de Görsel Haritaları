@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Görsel Haritaları</h2>
+<p>Büyüteç görseline gitmek için ortadaki yeşil alana, Türk Hack Team'e gitmek için alttaki yazıya arka plana gitme için ise sağ taraftaki boş alana tıklayınız.</p>
+
+<img src="https://i.hizliresim.com/c5awiw0.jpg" alt="GreenTeam" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+<area shape="rect" coords="34,44,270,350" alt="Büyüteç" href="https://productimages.hepsiburada.net/s/29/375/10279573717042.jpg">
+<area shape="rect" coords="290,172,333,250" alt="TürkHackTeam" href="https://www.turkhackteam.org/styles/v1/tht/logo.png">
+<area shape="circle" coords="337,300,44" alt="Arkaplan" href="https://i.hizliresim.com/c5awiw0.jpg">
+</map>
+
+</body>
+</html>

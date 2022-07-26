@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-image: url('example_img_girl.jpg');
+background-repeat: no-repeat;
+}
+</style>
+</head>
+<body>
+
+<h2>Arka plan Tekrarı
+
+</h2>
+
+<p>Arka plan görüntüsünün kendini tekrarlamasını önlemek için background-repeat özelliğini no-repeat özelliğiyle değiştiriniz.
+
+</p>
+
+</body>
+</html>

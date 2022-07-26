@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Görsel Kaydırma(Image Floating)
+
+</h2>
+<p><strong>Görseli sağa kaydır:</strong></p>
+
+<p>
+<img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+Sağa kaydırılmış görselle birlikte bir paragraf.
+</p>
+
+<p><strong>Görseli sola kaydır:</strong></p>
+<p>
+<img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+Sola kaydırılmış görselle birlikte bir paragraf.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Bağlantı(Link) olarak Görseller
+
+</h2>
+
+<p>Görsel aslında bir bağlantıdır. Tıklayabilirsiniz. </p>
+
+<a href="default.asp">
+<img src="smiley.gif" alt="HTML Öğrenelim" style="width:42px;height:42px;">
+</a>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Başka Bir Klasördeki Görseller
+
+</h2>
+<p>Görselleriniz bir alt klasördeyse, src özelliğine klasör adını eklemelisiniz.
+
+</p>
+
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+</body>
+</html>

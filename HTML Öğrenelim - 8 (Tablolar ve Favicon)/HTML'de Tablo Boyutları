@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+<body>
+
+<h2>%200 Genişlikte Bir HTML Tablosu</h2>
+
+<table style="width:200%">
+   <tr>
+
+
+    <th>THT Kullanıcı Adı</th>
+
+    <th>Bulunduğu Ekip</th>
+
+    <th>Ekipteki rölü</th>
+
+  </tr>
+
+  <tr>
+
+    <td>vancoondehni</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Mod</td>
+
+
+
+  </tr>
+
+
+  <tr>
+
+
+    <td>ALTAY'</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Genel Sorumlu</td>
+
+
+   </tr>
+
+
+   <tr>
+
+    <td>Eşref'</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Genel Sorumlu</td>
+
+
+
+  </tr>
+</table>
+
+</body>
+</html>

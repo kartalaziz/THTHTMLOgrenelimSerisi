@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+th, td {
+  border-style:solid;
+  border-color: #96D4D4;
+}
+</style>
+</head>
+<body>
+
+<h2>Kenarlık Rengi
+
+</h2>
+
+<p>border-color özelliği ile tabloların kenarlık renklerini değiştirebilirsiniz.
+
+</p>
+
+<table style="width:100%">
+  <tr>
+
+
+    <th>THT Kullanıcı Adı</th>
+
+
+    <th>Bulunduğu Ekip</th>
+
+
+    <th>Ekipteki rölü</th>
+
+
+  </tr>
+
+
+  <tr>
+
+
+    <td>vancoondehni</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Mod</td>
+
+
+  </tr>
+
+
+  <tr>
+
+
+    <td>ALTAY'</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Genel Sorumlu</td>
+
+
+   </tr>
+
+
+   <tr>
+
+
+    <td>Eşref'</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Genel Sorumlu</td>
+
+
+
+  </tr>
+</table>
+
+</body>
+</html>

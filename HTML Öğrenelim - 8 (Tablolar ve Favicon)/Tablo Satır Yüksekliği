@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body>
+
+<h2>İkinci sütunun boyutu %200</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>THT Kullanıcı Adı</th>
+    <th>Bulunduğu Ekip</th>
+    <th>Ekipteki Rolü</th>
+  </tr>
+  <tr style="height:200px">
+    <td>a</td>
+    <td>b</td>
+    <td>c</td>
+  </tr>
+  <tr>
+    <td>d</td>
+    <td>e</td>
+    <td>f</td>
+  </tr>
+  <tr>
+    <td>g</td>
+    <td>h</td>
+    <td>z</td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Birden Çok Sütun için Başlık Oluşturmak
+
+</h2>
+
+<p>İki veya daha fazla sütuna yayılan bir başlık tanımlamak mümkündür.
+
+Bunu yapabilmek için colspan özelliğini <th> etiketinin içinde kullanmalıyız.</p>
+
+<table style="width:100%">
+  <tr>
+    <th colspan="2">Kişi</th>
+    <th>Yaş</th>
+  </tr>
+  <tr>
+    <td>Ahmet</td>
+    <td>Kocakafa</td>
+    <td>45</td>
+  </tr>
+  <tr>
+    <td>Celil</td>
+    <td>Cüce</td>
+    <td>15</td>
+  </tr>
+</table>
+</body>
+</html>

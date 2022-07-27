@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>TD elementi tablo hücrelerini tanımlarken kullanılır.</h2>
+
+<table style="width:100%">
+  <tr>
+    <td>TürkHackTeam</td>
+    <td>Bulunduğu Team</td>
+    <td>Kullanıcı Adı</td>
+  </tr>
+</table>
+
+<p>Örneği daha iyi anlayabilmeniz için border yani sınır kısımlarını ekledik.</p>
+
+</body>
+</html>

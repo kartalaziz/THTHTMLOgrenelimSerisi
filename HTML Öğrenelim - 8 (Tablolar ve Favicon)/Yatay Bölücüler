@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Yatay Bölücüler
+
+</h2>
+<p>Eğer kenarları sadece altta belirtmek istiyorsanız yatay bölücüleri kullanabilirsiniz.
+
+Bunun için tr elementinin içine border-bottom özelliği eklenir.</p>
+
+<table>
+  <tr>
+    <th>İsim</th>
+    <th>Soyad</th>
+  <th>Numara</th>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>b</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>c</td>
+    <td>d</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>e</td>
+    <td>r</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>z</td>
+    <td>y</td>
+    <td>4</td>
+  </tr>
+</table>
+
+</body>
+</html>

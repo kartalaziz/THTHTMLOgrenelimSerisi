@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Dikey Tablo Başlıkları
+
+</h2>
+
+<p>İlk sütunu tablo başlıkları olarak kullanmak için her satırdaki ilk hücreyi th etiketiyle tanımlarız.
+
+</p>
+
+<table style="width:100%">
+  <tr>
+    <th>AD</th>
+    <td>Ahmet</td>
+    <td>Kaş</td>
+  </tr>
+  <tr>
+    <th>SOYAD</th>
+    <td>Mehmet</td>
+    <td>Taş</td>
+  </tr>
+  <tr>
+    <th>YAŞ</th> 
+    <td>15</td>
+    <td>53</td>
+  </tr>
+</table>
+
+</body>
+</html>

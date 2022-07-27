@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+
+<h2>Tablo Başlığı</h2>
+<p>Tüm tablo için bir tablo başlığı ekleyebilirsiniz.
+
+Bunun için table etiketinin içerisine caption etiketi eklenir.</p>
+
+<table style="width:100%">
+  <caption>Aylık Yatırımlar</caption>
+  <tr>
+    <th>Aylık</th>
+    <th>Yatırım Miktarı</th>
+  </tr>
+  <tr>
+    <td>Ocak</td>
+    <td>3000TL</td>
+  </tr>
+  <tr>
+    <td>Şubat</td>
+    <td>2000TL</td>
+  </tr>
+</table>
+
+</body>
+</html>

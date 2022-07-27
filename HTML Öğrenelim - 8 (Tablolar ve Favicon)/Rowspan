@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Rowspan - bir hücreyi 2 satıra yayalım
+
+</h2>
+<p>Bir hücreyi birden çok satıra yaymak için rowspan özelliği kullanılır.
+
+</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Kullanıcı</th>
+    <td>mahmutqral123</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Sosyal Medya Hesapları</th>
+    <td>twitter.com/mahmutqral123</td>
+  </tr>
+  <tr>
+    <td>instagram.com/mahmutqral123</td>
+  </tr>
+</table>
+</body>
+</html>

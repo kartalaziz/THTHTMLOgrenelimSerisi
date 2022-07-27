@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #D6EEEE;}
+</style>
+</head>
+<body>
+
+<h2>Üzerine Geldiğinde Renk Değiştiren Tablo
+
+</h2>
+<p>Efekti görmek için bir satırın üzerine mouse imlecinizi getirin</p>
+
+<table>
+  <tr>
+    <th>Ad</th>
+    <th>Soyad</th>
+    <th>Şehir</th>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>b</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>c</td>
+    <td>d</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>z</td>
+    <td>x</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>g</td>
+    <td>h</td>
+    <td>5</td>
+  </tr>
+</table>
+
+</body>
+</html>

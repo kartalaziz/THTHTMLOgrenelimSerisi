@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Tabloları - Zebra Çizgileri
+
+</h2>
+<p>Her 2 tablo satırından birisine arka plan rengi eklerseniz, güzel bir zebra çizgili efekti elde edersiniz.
+
+Her 2 satırdan birisini farklı renk yapmak için :nth-child(even) özelliği kullanılır.</p>
+
+<table>
+  <tr>
+  <th>Kullanıcı Adı</th>
+  <th>Ekip</th>
+  <th>Rol</th>
+  </tr>
+  <tr>
+  <td>SafakBey</td>
+  <td>GreenTeam</td>
+  <td>Mod</td>
+  </tr>
+  <tr>
+  <td>Kuvayihackiye</td>
+  <td>GreenTeam</td>
+  <td>Green Team Senior</td>
+  </tr>
+  <tr>
+  <td>connec</td>
+  <td>GreenTeam</td>
+  <td>Mod</td>
+  </tr>
+  <tr>
+  <td>Reina</td>
+  <td>Basın Medya</td>
+  <td>Lider</td>
+  </tr>
+</table>
+
+</body>
+</html>

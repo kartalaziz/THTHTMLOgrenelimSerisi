@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Daraltılmış Tablo Sınırları(Kenarlıkları)
+
+</h2>
+<p>Tablolarda ikili kenarlıklar eklemek istemiyorsal CSS'in border-collapse özelliği collapse ile kullanılır.
+
+</p>
+
+<table style="width:100%">
+   <tr>
+
+    <th>THT Kullanıcı Adı</th>
+
+    <th>Bulunduğu Ekip</th>
+
+    <th>Ekipteki rölü</th>
+
+  </tr>
+
+  <tr>
+
+    <td>vancoondehni</td>
+
+    <td>GreenTeam</td>
+
+    <td>Mod</td>
+
+  </tr>
+
+  <tr>
+
+    <td>ALTAY'</td>
+
+    <td>GreenTeam</td>
+
+    <td>Genel Sorumlu</td>
+
+   </tr>
+
+   <tr>
+
+    <td>Eşref'</td>
+
+    <td>GreenTeam</td>
+
+    <td>Genel Sorumlu</td>
+
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Gömülü HTML Listeleri(Nested Lists)
+
+</h2>
+<p>Listeler iç içe oluşturulabilir.</p>
+
+<ul>
+  <li>Blue Team</li>
+  <li>Green Team
+    <ul>
+      <li>İçerik Ekibi</li>
+      <li>Proje Ekibi</li>
+    </ul>
+  </li>
+  <li>Anka Red Team</li>
+</ul>
+
+</body>
+</html>

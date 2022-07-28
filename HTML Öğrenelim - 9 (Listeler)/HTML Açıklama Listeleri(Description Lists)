@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Açıklama listeleri</h2>
+
+<dl>
+  <dt>Satoshi Nakamoto</dt>
+  <dd>-Bitcoin'in mucidi olan, kim olduğu bilinmeyen kişi, grup</dd>
+  <dt>Vitalik</dt>
+  <dd>-Ethereum'un ağası</dd>
+</dl>
+
+</body>
+</html>

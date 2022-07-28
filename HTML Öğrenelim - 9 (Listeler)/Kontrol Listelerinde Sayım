@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>start Özelliği</h2>
+<p>Varsayılan olarak sıralı listeler saymaya 1'den başlar. Eğer farklı bir sayıdan saymaya başlamasını istiyorsanız start özelliğini kullanabilirsiniz.
+
+</p>
+
+<ol start="50">
+  <li>Ahmet</li>
+  <li>Mahmut</li>
+  <li>Ayşe</li>
+</ol>
+
+<ol type="I" start="50">
+  <li>Caner</li>
+  <li>Cülcül</li>
+  <li>Berkecan</li>
+</ol>
+
+</body>
+</html>

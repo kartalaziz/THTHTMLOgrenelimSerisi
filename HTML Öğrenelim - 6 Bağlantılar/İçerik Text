@@ -1,0 +1,89 @@
+HTML Linkleri(Bağlantıları)
+
+Bağlantılar tüm web sayfalarında bulunur.
+Bağlantılar, kullanıcıların sayfadan sayfaya tıklamalarına izin verir.
+
+HTML Bağlantıları - Hyperlinks
+
+HTML bağlantıları köprülerdir.
+Bir bağlantıya tıklayıp başka bir belgeye atlayabilirsiniz.
+Fareyi bir bağlantının üzerine getirdiğinizde, fare oku küçük bir ele dönüşecektir.
+Not: Bir bağlantının metin olması zorunlu değildir. Bir bağlantı bir resim veya başka bir HTML öğesi olabilir.
+
+
+HTML Bağlantıları - Syntax
+HTML'de <a> etiketi bir hyperlink tanımlar.​
+Örnek kullanım:
+HTML:
+<a href="url">Bağlantı metni</a>
+<a> etiketinde en önemli özellik href özelliğidir. href özelliği bağlantının hedefini belirtir.
+Yukarıdaki örnek kullanımda belirttiğimiz bağlantı metni kullanıcılar tarafından görülebilir.
+Bağlantı metnine tıklandığında kullanıcı belirtilmiş olan URL adresine gönderilecektir.
+
+Varsayılan olarak, bağlantılar tüm tarayıcılarda aşağıdaki gibi görünecektir:
+
+Ziyaret edilmemiş bir bağlantının altı çizili ve mavidir.
+Ziyaret edilen bir bağlantının altı çizili ve mordur.
+Aktif bir bağlantının altı çizili ve kırmızıdır.
+
+HTML Linkleri(Bağlantıları) - target özelliği​
+
+Bağlantılı sayfa mevcut tarayıcı penceresinde varsayılan(yani default olarak tanımlanmış) şekilde görüntülenecektir. Bunu değiştirmek için bağlantı için başka bir hedef belirtmelisiniz.
+
+target özelliği bağlantılı belgenin nerede açılacağını belirtir.
+
+target özelliği aşağıda belirttiğim eklentilerle birlikte kullanılabilir:
+_self :Varsayılan eklentidir. Belgeyi, tıklandığı pencerede/sekmede açar.
+_blank : Belgeyi yeni bir pencerede veya sekmede açar
+_parent :Belgeyi üst çerçevede açar
+_top : Belgeyi pencerenin tam gövdesinde açar
+
+Absolute URL vs. Relative URL(Mutlak URL'ler ve Göreli URL'ler)​
+
+Yukarıdaki her iki örnek de href özelliğinde mutlak bir URL (tam web adresi) kullanıyor.
+Yerel bir bağlantı (aynı web sitesindeki bir sayfaya bağlantı), göreli bir URL ile belirtilir ("https://www" olmadan):
+
+
+HTML Linkleri - Bir görseli link(bağlantı) olarak kullanmak
+Bir görseli link olarak kullanmamız için yapmamız gereken <img> etiketini <a> etiketinin içerisine yerleştirmektir.
+Örnek:
+
+E-mail adresini bağlantı olarak eklemek​
+
+Kullanıcının yeni bir e-posta göndermesine izin vermek için bir bağlantı oluşturmak istiyorsak href özelliğinin içinde mailto: ifadesi kullanılır.
+Örnek:
+
+Butonları Bağlantı(Link) Olarak Kullanmak
+
+Bir HTML butonunu bağlantı olarak kullanmak için biraz JavaScript kodu eklemeniz gerekir.
+JavaScript, bir buton tıklaması gibi belirli olaylarda ne olacağını belirtmenize olanak tanır:
+Örnek:
+
+Link(Bağlantı) Başlıkları
+title özelliği bir element hakkında ekstradan bilgi sağlamak için kullanılır. Bu bilgiler genellikle mouse üzerine geldiğinde ipucu metni olarak gösterilir.
+Örnek:
+
+HTML Linkleri(Bağlantıları) - Farklı Renkler​
+
+Bir HTML bağlantısı, ziyaret edilmiş olmasına, ziyaret edilmemiş olmasına veya etkin olmasına bağlı olarak farklı renklerde görüntülenir.
+
+HTML Bağlantı Renkleri
+
+Varsayılan olarak, şu şekilde bir bağlantı görünecektir (tüm tarayıcılarda):
+-Ziyaret edilmemiş bir bağlantının altı çizili ve mavidir.
+-Ziyaret edilen bir bağlantının altı çizili ve mordur.
+-Aktif bir bağlantının altı çizili ve kırmızıdır.
+
+CSS kullanarak bağlantı durumu renklerini değiştirebilirsiniz:
+
+Bağlantı Butonları
+Bir bağlantı, CSS kullanılarak bir buton olarak da biçimlendirilebilir:
+
+HTML Bağlantıları - Yer İmleri Oluşturun
+
+Yer imleri, okuyucuların bir web sayfasının belirli bölümlerine atlayabilmeleri için kullanılabilir.
+Bir web sayfası çok uzunsa yer imleri yararlı olabilir.
+Bir yer imi oluşturmak için: önce yer imini oluşturun, ardından ona bir bağlantı ekleyin.
+Bağlantı tıklandığında, sayfa aşağı veya yukarı kaydırılarak yer iminin bulunduğu konuma gelir.
+Örnek:
+

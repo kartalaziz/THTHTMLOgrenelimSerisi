@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sırasız(Unordered) HTML Listeleri</h2>
+
+<ul>
+  <li>Selamın Aleyküm</li>
+  <li>THT</li>
+  <li>HTML'de Listeler</li>
+</ul> 
+
+</body>
+</html>

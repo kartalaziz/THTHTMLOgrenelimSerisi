@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sıralı HTML Listeleri</h2>
+
+<ol>
+  <li>Real Madrid</li>
+  <li>Barcelona</li>
+  <li>Çorumspor</li>
+</ol> 
+
+</body>
+</html>

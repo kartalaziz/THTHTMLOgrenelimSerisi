@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>class Özelliğini JavaScript'te Kullanmak</h2>
+<p>"city" sınıf adıyla tüm özellikleri saklamak için butona basınız</p>
+
+<button onclick="myFunction()">Elementleri sakla</button>
+
+<h2 class="city">London</h2>
+<p>Londra İngiltere'nin başkentidir.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris Fransa'nın başkentidir.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo Japonya'nın başkentidir.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementsByClassName("city");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="turkhackteam.org" target="_blank">
+</head>
+<body>
+
+<h1>base elementi</h1>
+
+<p><img src="https://www.turkhackteam.org/styles/v1/tht/logo.png" width="24" height="39" alt="Logo"> - Görüntü için yalnızca göreli bir adres belirttiğimize dikkat edin. Head bölümünde bir temel URL belirttiğimizden, tarayıcı "https://www.turkhackteam.org/styles/v1/tht/logo.png"adresindeki resmi arayacaktır.</p>
+
+<p><a href="tags/tag_base.asp">HTML base etiketi</a> - Dikkat edin linke tıkladığınızda  target="_blank" özelliği bulunmadığı halde yan sekmede açılıyor. Bunun nedeni, temel öğenin hedef niteliğinin "_blank" olarak ayarlanmış olmasıdır..</p>
+
+</body>
+</html>

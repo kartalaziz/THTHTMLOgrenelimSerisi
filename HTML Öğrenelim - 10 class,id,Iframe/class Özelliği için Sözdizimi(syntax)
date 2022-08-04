@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>class Özelliği</h2>
+<p>"city" sınıf adı ile elementleri şekillendirmek için CSS kullanın:</p>
+
+<h2 class="city">Londra</h2>
+<p>Londa İngiltere'nin başkentidir.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris Fransa'nın başkentidir.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo Japonya'nın başkentidir.</p>
+
+</body>
+</html>

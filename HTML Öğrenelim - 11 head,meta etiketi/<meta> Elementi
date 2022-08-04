@@ -1,0 +1,23 @@
+
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="description" content="HTM Egitimi">
+<meta name="author" content="Aziz - vancoondehni">
+<meta http-equiv="refresh" content="30">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!------
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="HTM ogrenelim">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="vancoondehni">
+</head>
+<body>
+
+<p>Tüm meta bilgileri head kısmının içerisinde belirtilir.</p>
+
+</body>
+</html>
+------>

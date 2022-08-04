@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>id Özelliği</h2>
+<p>
+"myHeader" kimliğine sahip bir öğeye stil vermek için CSS kullanın:</p>
+
+<h1 id="myHeader">My Header</h1>
+
+</body>
+</html>

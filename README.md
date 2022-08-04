@@ -662,3 +662,178 @@ Yorumlar, HTML kodunun ortasındaki bölümleri gizlemek için kullanılabilir.
 
 # Bölüm 4
 
+## HTML'de Renkler
+HTML renkleri, önceden tanımlanmış renk adlarıyla veya RGB, HEX, HSL, RGBA veya HSLA değerleriyle belirtilir.
+
+### Renklerin İsimleri
+HTML'de, bir renk adı kullanılarak bir renk belirtilebilir.
+
+HTML 140 farklı rengi desteklemektedir. Bu listeye bağlantıdan ulaşabilirsiniz.
+![Renkler](https://www.w3schools.com/colors/colors_names.asp)
+
+### Arka plan Rengi
+HTML öğeleri için arka plan rengini ayarlayabilirsiniz.
+```
+<html>
+
+<body>
+
+    <h1 style="background-color:DodgerBlue;">HTML Öğrenelim 4</h1>
+    <p style="background-color:Tomato;"> #GreenTeam</p>
+
+
+</body>
+
+</html>
+```
+![Çıktı](https://i.hizliresim.com/ud1c21c.png)
+
+### Metin Rengi
+Metnin rengini ayarlayabilirsiniz.
+
+```
+<html>
+
+<body>
+
+    <h1 style="color:Tomato;">Merhaba THT</h1>
+    <p style="color:DodgerBlue;">Ben vancoondehni</p>
+    <p style="color:MediumSeaGreen;">#GreenTeam</p>
+
+
+</body>
+
+</html>
+```
+![Çıktı](https://i.hizliresim.com/bity5ll.png)
+
+### Sınır Rengi
+Kenarlıkların rengini ayarlayabilirsiniz.
+```
+<html>
+
+<body>
+
+    <h1 style="border:2px solid Tomato;">Merhaba</h1>
+<h1 style="border:2px solid DodgerBlue;">THT</h1>
+<h1 style="border:2px solid Violet;">Beraberce HTML Öğrenelim</h1>
+
+
+</body>
+
+</html>
+```
+![Çıktı](https://i.hizliresim.com/u6zm14b.png)
+
+
+### Renk Değerleri
+HTML'de renkler RGB değerleri, HEX değerleri, HSL değerleri, RGBA değerleri ve HSLA değerleri kullanılarak da belirlenebilir.
+
+### HTML RGB ve RGBA Renkleri
+Bir RGB renk değeri KIRMIZI, YEŞİL ve MAVİ ışık kaynaklarını temsil eder.
+
+RGBA renk değeri, RGB'nin Alfa kanalına (opaklığa) sahip bir uzantısıdır.
+
+
+### RGB Renk Değerleri
+HTML'de bir renk, şu formül kullanılarak RGB değeri olarak belirtilebilir:
+
+rgb (kırmızı, yeşil, mavi)
+
+Her parametre (kırmızı, yeşil ve mavi), rengin yoğunluğunu 0 ile 255 arasında bir değerle tanımlar.
+
+Bu, 256 x 256 x 256 = 16777216 olası renk olduğu anlamına gelir!
+
+Örneğin, rgb(255, 0, 0) kırmızı olarak görüntülenir, çünkü kırmızı en yüksek değerine (255) ve diğer ikisi (yeşil ve mavi) 0'a ayarlanmıştır.
+
+Başka bir örnek, rgb(0, 255, 0) yeşil olarak görüntülenir, çünkü yeşil en yüksek değerine (255) ve diğer ikisi (kırmızı ve mavi) 0'a ayarlanmıştır.
+
+Siyahı görüntülemek için, tüm renk parametrelerini şu şekilde 0'a ayarlayın: rgb(0, 0, 0).
+
+Beyazı görüntülemek için, tüm renk parametrelerini şu şekilde 255'e ayarlayın: rgb(255, 255, 255).
+
+![Çıktı](https://i.hizliresim.com/n1z4vjy.png)
+
+### Grinin Tonları
+
+Gri tonları genellikle üç parametrenin tümü için eşit değerler kullanılarak tanımlanır.
+![Çıktı](https://i.hizliresim.com/mn8wxin.png)
+
+### RGBA Renk Değerleri
+RGBA renk değerleri, bir rengin opaklığını belirten Alfa kanalıyla RGB renk değerlerinin bir uzantısıdır.
+
+Bir RGBA renk değeri şu şekilde belirtilir:
+
+rgba(kırmızı, yeşil, mavi, alfa)
+
+Alfa parametresi, 0.0 (tamamen şeffaf) ile 1.0 (hiç şeffaf değil) arasında bir sayıdır.
+
+![Çıktı](https://i.hizliresim.com/lawnyqo.png)
+
+### HTML HEX Renkleri
+Onaltılık bir renk şu şekilde belirtilir: #RRGGBB, burada RR (kırmızı), GG (yeşil) ve BB (mavi) onaltılık tam sayılar rengin bileşenlerini belirtir.
+
+### HEX Renk Değerleri
+HTML'de, onaltılık formda bir değer kullanılarak bir renk belirtilebilir:
+
+#rrggbb
+
+Burada rr (kırmızı), gg (yeşil) ve bb (mavi), 00 ve ff arasındaki onaltılık değerlerdir (ondalık 0-255 ile aynı).
+
+Örneğin, kırmızı en yüksek değerine (ff) ve diğer ikisi (yeşil ve mavi) 00'a ayarlandığından #ff0000 kırmızı olarak görüntülenir.
+
+Başka bir örnek, #00ff00 yeşil olarak görüntülenir, çünkü yeşil en yüksek değerine (ff) ve diğer ikisi (kırmızı ve mavi) 00'a ayarlanmıştır.
+
+Siyahı görüntülemek için tüm renk parametrelerini 00'a ayarlayın, bunun gibi: #000000.
+
+Beyazı görüntülemek için tüm renk parametrelerini şu şekilde ff olarak ayarlayın: #ffffff.
+
+![Çıktı](https://i.hizliresim.com/ij9hdoh.png)
+
+### Grinin Tonları
+Gri tonları genellikle üç parametrenin tümü için eşit değerler kullanılarak tanımlanır.
+
+![Çıktı](https://i.hizliresim.com/3wt7dq3.png)
+
+### HTML HSL ve HSLA Renkleri
+
+HSL, ton, doygunluk ve hafiflik anlamına gelir.
+
+HSLA renk değerleri, Alfa kanalı (opaklık) ile HSL'nin bir uzantısıdır.
+
+### HSL Renk Değerleri
+
+HTML'de bir renk, şu şekilde ton, doygunluk ve açıklık (HSL) kullanılarak belirtilebilir:
+
+hsl(ton, doygunluk, hafiflik)
+
+Ton, renk tekerleğinde 0 ile 360 arasındaki bir derecedir. 0 kırmızı, 120 yeşil ve 240 mavidir.
+
+Doygunluk bir yüzde değeridir, %0 bir gri tonu anlamına gelir ve %100 tam renktir.
+
+Açıklık da bir yüzde değeridir, %0 siyahtır ve %100 beyazdır.
+
+![Çıktı](https://i.hizliresim.com/a4cnk7a.png)
+
+### Doyma(Satürasyon)
+Doygunluk, bir rengin yoğunluğu olarak tanımlanabilir.
+
+%100 saf renktir, gri tonları yoktur.
+
+%50, %50 gridir, ancak yine de rengi görebilirsiniz.
+
+%0 tamamen gri, artık rengi göremezsiniz.
+
+![Çıktı](https://i.hizliresim.com/pkqlqxv.png)
+
+### Açıklık
+Bir rengin açıklığı, renge ne kadar ışık vermek istediğiniz olarak tanımlanabilir, burada %0 ışık yok (siyah), %50 %50 ışık (ne karanlık ne açık) anlamına gelir %100 tam açıklık (beyaz) anlamına gelir.
+
+![Çıktı](https://i.hizliresim.com/nyy7kww.png)
+
+### Grinin Tonları
+Gri tonları genellikle ton ve doygunluk 0'a ayarlanarak ve daha koyu/daha açık gölgeler elde etmek için açıklığı %0'dan %100'e ayarlayarak tanımlanır.
+
+![Çıktı](https://i.hizliresim.com/eipshea.png)
+
+# Bölüm 5

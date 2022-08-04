@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>Farklı Elementler Aynı Sınıfı Paylaşabilir
+
+</h2>
+
+<p>İki HTML elementi aynı etiket ismine sahip olmasa bile aynı sınıfı işaret edebilirler ve CSS ile birlikte aynı görünümü elde edebilirler.</p>
+
+<h2 class="city">Paris</h2>
+<p class="city">Paris Fransa'nın başkentidir.</p>
+
+</body>
+</html>

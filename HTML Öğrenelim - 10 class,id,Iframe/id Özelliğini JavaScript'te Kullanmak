@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>id Özelliğini JavaScript'te Kullanmak</h2>
+<p>id özelliği, JavaScript tarafından belirli öğe için bazı görevleri gerçekleştirmek için kullanılabilir.
+
+
+
+JavaScript, getElementById() yöntemiyle belirli bir kimliğe sahip bir öğeye erişebilir</p>
+
+<h1 id="myHeader">Merhaba THT</h1>
+<button onclick="displayResult()">Metni Değiştir.</button>
+
+<script>
+function displayResult() {
+  document.getElementById("myHeader").innerHTML = "Have a nice day!";
+}
+</script>
+
+</body>
+</html>

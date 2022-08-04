@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Merhaba JavaScript!";
+</script>
+
+<noscript>Üzgünüm, tarayıcınız JavaScript'i desteklemiyor.</noscript>
+
+<p>JavaScript desteği olmayan bir tarayıcı, noscript öğesinin içine yazılan metni gösterecektir.</p>
+ 
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>THT - HTML Öğrenelim</title>
+  <script>
+  function myFunction() {
+    document.getElementById("demo").innerHTML = "Merhaba THT";
+  }
+  </script>
+</head>
+<body>
+
+<h1>THT</h1>
+<p id="demo">Selamlar</p>
+<button type="button" onclick="myFunction()">Deneme</button>
+
+</body>
+</html>

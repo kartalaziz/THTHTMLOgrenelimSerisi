@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+
+.main {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Çoklu Sınıflar(Multiple Classes)
+
+</h2>
+<p>HTML elementleri birden fazla sınıfa ait olabilirler.
+
+</p>
+
+<h2 class="city main">London</h2>
+<h2 class="city">Paris</h2>
+<h2 class="city">Tokyo</h2>
+
+</body>
+</html>

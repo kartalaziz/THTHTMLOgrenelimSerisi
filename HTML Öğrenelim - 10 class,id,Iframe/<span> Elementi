@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>span Elementi</h1>
+
+<p>THT'nin en iyi içerik üreten ekibi <span style="color:green;font-weight:bold">Green Team</span> forum üyeleri için detaylı içerikler hazırlarlar.  <span style="color:blue;font-weight:bold">Basın Medya</span> ekibi ise bu içeriklerin tanıtmını yapmaktadır.</p>
+
+</body>
+</html>

@@ -4006,7 +4006,7 @@ Aşağıdaki örnekte `<h2>` ve `<p>` elementleri "city" sınıfını işaret et
 
 Sınıf adı(class name), belirli elementler için belirli görevleri gerçekleştirmek amacıyla JavaScriptte kullanılabilir.
 
-JavaScript, getElementsByClassName() yöntemiyle belirli bir sınıf adına sahip öğelere erişebilir.
+JavaScript, `getElementsByClassName()` yöntemiyle belirli bir sınıf adına sahip öğelere erişebilir.
 ```
 <!DOCTYPE html>
 <html>
@@ -4076,5 +4076,458 @@ Aşağıdaki örnekte, "myHeader" id'sine işaret eden bir `<h1>` elemanımız v
 </html>
 ```
 ![Çıktı](https://i.hizliresim.com/k9icfqt.png)
+
 Not: id ismi küçük harf-büyük harf duyarlılığına sahiptir.(case sensitive)
+
 Not: id isimleri en az bir karakter içermek zorundadır. id isimleri numara ile başlayamaz ve boşluk içeremez.
+
+## id Özelliğini JavaScript'te Kullanmak
+
+id özelliği, JavaScript tarafından belirli öğe için bazı görevleri gerçekleştirmek için kullanılabilir.
+
+JavaScript, `getElementById()` yöntemiyle belirli bir kimliğe sahip bir öğeye erişebilir.
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>id Özelliğini JavaScript'te Kullanmak</h2>
+<p>id özelliği, JavaScript tarafından belirli öğe için bazı görevleri gerçekleştirmek için kullanılabilir.
+
+
+
+JavaScript, getElementById() yöntemiyle belirli bir kimliğe sahip bir öğeye erişebilir</p>
+
+<h1 id="myHeader">Merhaba THT</h1>
+<button onclick="displayResult()">Metni Değiştir.</button>
+
+<script>
+function displayResult() {
+  document.getElementById("myHeader").innerHTML = "Have a nice day!";
+}
+</script>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/nt4m88r.png)
+
+## HTML'de Iframe
+Bir web sayfasını bir web sayfasının içinde görüntülemek için Iframe kullanılır.
+![Çıktı](https://i.hizliresim.com/teb1n1q.png)
+## Iframe ifadesinin sözdizimi(Syntax)
+
+`<iframe>` etiketi satır içi bir çerçeve oluşturmak için kullanılır.
+Satır içi bir çerçeve bir dökümanı mevcut HTML dökümanına gömmek için kullanılır.
+
+Kullanım biçimi:
+`<iframe src="url" title="description"></iframe>`
+
+İpucu: `<iframe>` için her zaman bir `<title>` özelliği eklemek iyi bir uygulamadır. Bu, ekran okuyucular tarafından iframe içeriğinin ne olduğunu okumak için kullanılır.
+
+## Iframe - Yüksekliği ve genişliği ayarlamak
+Iframe'in genişliğini ve yüksekliğini ayarlamak için `height` ve `width` özelliklerini kullanırız.
+Kullanım biçimi:
+`<iframe src="demo_iframe.htm" height="200" width="300" title="Iframe Example"></iframe>`
+veya style özelliğini kullanarak CSS'in height ve width özelliklerini kullanabilirsiniz.
+Kullanım biçimi:
+`<iframe src="demo_iframe.htm" style="height:200px;width:300px;" title="Iframe Example"></iframe>`
+
+## Iframe - Sınırları Kaldırmak
+Varsayılan olarak iframe çevresinde bir sınırla birlikte oluşur. Bu sınırı kaldırmak için style özelliğini CSS'in border özelliğiyle kullanabiliriz.
+`<iframe src="demo_iframe.htm" style="border:none;" title="Iframe Example"></iframe>`
+Ayrıca CSS ile birlikte iframe'in sınırının boyutunu ve rengini değiştirebilirsiniz.
+`<iframe src="demo_iframe.htm" style="border:2px solid red;" title="Iframe Example"></iframe>`
+
+## Iframe - Bağlantı Hedefi
+Bir iframe, bir bağlantı için hedef çerçeve olarak kullanılabilir.
+
+Bağlantının target özelliği iframe'in name özelliğini anmalıdır.
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Iframe - Bağlantı Hedefi
+
+</h2>
+
+<iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+<p>Bir bağlantının hedef niteliği, bir iframe'in adıyla eşleştiğinde, bağlantı iframe'de açılır..</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/oa4klhx.png)
+
+## HTML ve JavaScript
+JavaScript HTML sayfalarını daha dinamik ve etkileşimli kılar.
+
+### HTML'de <script> Etiketi
+`<script>` etiketi kullanıcı tarafında bir script tanımlamak için kullanılır.(JavaScript)
+
+`<script>` öğesi ya script deyimleri içerir ya da src özelliği aracılığıyla harici bir komut dosyasına işaret eder.
+
+JavaScript'in yaygın kullanımları, görüntü işleme, form doğrulama ve dinamik içerik değişiklikleridir.
+
+JavaScript, bir HTML elementi seçmek için çoğunlukla `document.getElementById()` yöntemini kullanır.
+
+JavaScript ne yapabilir?
+
+* Javascript içeriği değiştirmek için kullanılabilir.
+* Javascript stil değiştirmek için kullanılabilir. 
+* Javascript özellik değiştirmek için kullanılabilir.
+
+### <noscript> Etiketi
+`<noscript>` etiketi tarayıcılarında komut dosyalarını devre dışı bırakmış veya komut dosyalarını desteklemeyen bir tarayıcıya sahip kullanıcılara gösterilecek alternatif bir içeriği tanımlar.
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Merhaba JavaScript!";
+</script>
+
+<noscript>Üzgünüm, tarayıcınız JavaScript'i desteklemiyor.</noscript>
+
+<p>JavaScript desteği olmayan bir tarayıcı, noscript öğesinin içine yazılan metni gösterecektir.</p>
+ 
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/ohc9j5x.png)
+Eğer tarayıcımız JavaScript'i desteklemiyor olsaydı "Üzgünüm, tarayıcınız JavaScript'i desteklemiyor." çıktısını verecekti.
+
+## HTML'de Dosya Yolları
+Dosya yolu, bir web sitesinin klasör yapısındaki bir dosyanın konumunu tanımlar.
+
+Dosya yolları, aşağıdakiler gibi harici dosyalara bağlanırken kullanılır:
+
+-Web sayfaları
+
+-Görseller
+
+-Style sheets
+
+-JavaScripts
+
+#### Örnek Dosya Yolları
+![Çıktı](https://i.hizliresim.com/dc1ouxs.png)
+
+### Mutlak Dosya Yolları
+Mutlak dosya yolu, bir dosyanın tam URL'sidir:
+`<img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain">`
+
+### Relative Dosya Yolları
+Göreli bir dosya yolu, geçerli sayfaya göre bir dosyaya işaret eder.
+
+Aşağıdaki örnekte, dosya yolu, geçerli web'in kökünde bulunan resimler klasöründeki bir dosyaya işaret eder:
+`<img src="/images/picture.jpg" alt="Mountain">`
+
+# Bölüm 11
+
+## HTML'de <head> Elementi
+`<head> elementi <title>,<style>,<meta>,<link>,<script> ve <base>` etiketlerini kapsayan bir elementtir.
+`<head>` elementi metadata'yı kapsayan bir elementtir. `<html>` ve `<body>` etiketlerinin arasında yer alır.
+
+Metadata HTML dökümanı hakkındaki verilerdir. Metadata çıktı olarak görünmez.
+
+Metadata genellikle dökümanın başlığını(title), karakter setini, stilini(styles), scriptlerini ve meta bilgisini tanımlar.
+
+## <title> Elementi
+
+`<title>` elementi dökümanın başlığını tanımlamak için kullanılır. Başlık sadece karakter içermelidir.(text-only). Başlık internet tarayıcısının sekmeler kısmında görünen metindir.
+
+`<title>` tüm HTML dökümanlarında gereklidir.
+
+Sayfanızın başlığı SEO(Arama Motoru Optimizasyonu) için önemli bir parametredir. Sayfa başlıkları arama motorlarının algoritmaları tarafından listelenecek sitelerin kararlaştırılmasında kullanılır.
+
+## <style> Elementi
+`<style>` elementi HTML sayfalarının biçimini belirlemek için kullanılır.
+
+## <link> Elementi
+`<link>` elementi mevcut döküman ile bir dış kaynak arasındaki ilişkiyi tanımlar.
+
+`<link>` etiketi çoğunlukla harici style sheet(stil sayfalarına) bağlanmak için kullanılır.
+
+## <meta> Elementi
+
+`<meta>` elementi karakter setini, sayfa açıklamasını, anahtar kelimeleri, dökümanın yazarını ve viewport özelliklerini belirlemek için kullanılır.
+
+Metadata sayfada çıktı olarak gösterilmeyecektir ancak tarayıcı tarafından kullanılacaktır.(Tarayıcı sayfanın nasıl yükleneceğine dadir bilgi edinir.) Metadata arama motorları ve diğer web servisleri tarafından da kullanılır.
+
+Örnek Kullanımlar:
+
+Kullanılan karakter setini belirtmek için: `<meta charset="UTF-8">`
+
+Arama motorları için anahtar kelime belirtme: `<meta name="keywords" content="HTML, CSS, JavaScript">`
+
+Web sitesine bir açıklama tanımlamak için: `<meta name="description" content="HTM Egitimi">`
+
+Sayfanın yazarını tanımlamak için: `<meta name="author" content="Aziz - vancoondehni">`
+
+Dökümanı her 30 saniyede bir yenilemek için: `<meta http-equiv="refresh" content="30">`
+
+Web sitenizin tüm cihazlarda iyi görünmesini sağlamak için görünüm alanını(viewport) ayarlama: `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+
+`<meta>` etiketlerinin örneği:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="HTM ogrenelim">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="vancoondehni">
+</head>
+<body>
+
+<p>Tüm meta bilgileri head kısmının içerisinde belirtilir.</p>
+
+</body>
+</html>
+```
+
+## Görünüm Alanı(viewport) Ayarları
+Viewport kullanıcıların internet sitesindeki görebildikleri alandır. Bu alan cihazdan cihaza, ekran boyutuna göre değişiklik gösterir.
+
+Tüm web sitelerinde `<meta>` elementinin aşağıdaki kodunu bulundurmalısınız:
+`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+Yukarıdaki kod, tarayıcıya sayfanın boyutlarını ve ölçeklendirmesini nasıl kontrol edeceğine dair talimatlar verir.
+
+`width=device-width` kısmı ekran genişliğini cihazın genişliğine uyarlayacaktır.
+`initial-scale=1.0` kısmı sayfa tarayıcı tarafından ilk yüklendiğinde başlangıç yakınlaştırma düzeyini ayarlar.
+
+viewport meta etiketi olmadan ve olduğunda bir sayfanın nasıl göründüğüne bakalım:
+![Çıktı](https://i.hizliresim.com/o113k8y.png)
+
+## <script> Elementi
+`<script>` elementi istemci tabanlı JavaScriptler oluşturmak için kullanılır.
+
+Örnek: Aşağıdaki JavaScript kodunda `:demo` idsine sahip element "Merhaba THT" yazmaktadır.
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <title>THT - HTML Öğrenelim</title>
+  <script>
+  function myFunction() {
+    document.getElementById("demo").innerHTML = "Merhaba THT";
+  }
+  </script>
+</head>
+<body>
+
+<h1>THT</h1>
+<p id="demo">Selamlar</p>
+<button type="button" onclick="myFunction()">Deneme</button>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/c5x2wwm.png)
+Deneme butonuna tıkladıktan sonraki çıktı:
+![Çıktı](https://i.hizliresim.com/1fbgcdq.png)
+
+## <base> Elementi
+`<base>` elementi, bir sayfadaki tüm göreli URL'ler için temel URL'yi veya hedefi belirtir.
+
+`<base>` etiketi, bir href veya target özelliğini veya her ikisini birden içermelidir.
+
+Bir dökümanda sadece bir `<base>` elementi bulunabilir.
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="turkhackteam.org" target="_blank">
+</head>
+<body>
+
+<h1>base elementi</h1>
+
+<p><img src="https://www.turkhackteam.org/styles/v1/tht/logo.png" width="24" height="39" alt="Logo"> - Görüntü için yalnızca göreli bir adres belirttiğimize dikkat edin. Head bölümünde bir temel URL belirttiğimizden, tarayıcı "https://www.turkhackteam.org/styles/v1/tht/logo.png"adresindeki resmi arayacaktır.</p>
+
+<p><a href="tags/tag_base.asp">HTML base etiketi</a> - Dikkat edin linke tıkladığınızda  target="_blank" özelliği bulunmadığı halde yan sekmede açılıyor. Bunun nedeni, temel öğenin hedef niteliğinin "_blank" olarak ayarlanmış olmasıdır..</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/7bv5jtj.png)
+
+## HTML'de Düzen Öğeleri ve Teknikleri(HTML Layout Elements and Techniques)
+Web siteleri genellikle içeriği birden çok sütunda görüntülerler.
+
+HTML birkaç semantik elemente sahiptir. Bu semantik elementleri web sayfasının farklı kısımlarını tanımlamakta kullanılır.
+![Çıktı](https://i.hizliresim.com/elm1j6r.png)
+- `<header>` - Bir döküman veya kısım için başlık tanımlarken kullanılır.
+
+- `<nav>` - Bir dizi gezinme bağlantısı tanımlarken kullanılır.
+
+- `<section>` - Bir dökümandaki bir kısmı tanımlarken kullanılır.
+
+- `<article>` - Bağımsız(kendi kendine yeten) bir içerik tanımlar.
+
+- `<aside>` - İçeriğin kenarına bir içerik tanımlar.(kenar çubuğu gibi)
+
+- `<footer>` - Bir belge veya bölüm için bir altbilgi tanımlar.
+
+- `<details>` - Kullanıcın istediği zaman açıp kapatabileceği ek detay tanımlamak için kullanılır.
+
+- `<summary>` - <details>elementi için bir başlık tanımlar.
+
+## HTML'de Düzen Teknikleri
+Çok sütunlu düzenler oluşturmak için dört farklı teknik vardır.
+
+Her tekniğin artıları ve eksileri vardır:
+
+- CSS framework
+
+- CSS float property
+
+- CSS flexbox
+
+- CSS grid
+
+## CSS Frameworks
+Eğer düzeni hızlıca oluşturmak istiyorsanız CSS frameworklerinden birisini kullanabilirsiniz.(örnek: Bootstrap)
+
+## CSS Float Düzeni
+Tüm düzeni CSS'in float özelliğiyle oluşturmak yaygın bir durumdur. Float'ı öğrenmesi kolaydır. Sadece float ve clear özelliklerinin nasıl çalıştığını hatırlamanız gerekir.
+
+Eksi yönleri: Float elemanlar esnek şekilde sitenizi oluşturmanızda size zarar verebilecek belge akışına bağlıdır.
+
+## CSS Flexbox Düzeni
+Flexbox, sayfa düzeninin farklı ekran boyutlarını ve farklı görüntüleme cihazlarını barındırması gerektiğinde öğelerin öngörülebilir şekilde davranmasını sağlar.
+
+## CSS Grid Düzeni
+Grid Düzen Modülü, satırlar ve sütunlar içeren ızgara tabanlı bir düzen sistemi sunarak, kayan noktalar ve konumlandırma kullanmak zorunda kalmadan web sayfalarını tasarlamayı kolaylaştırır.
+
+## HTML'de Duyarlı Web Tasarımı
+Duyarlı web tasarımı demek internet sitelerinin tüm cihazlarda güzel gözükmesini sağlamaktır.
+
+Duyarlı bir web tasarımı, farklı ekran boyutları ve görünüm alanları için otomatik olarak ayarlanacaktır.
+Örnek kullanım(Kaynak W3Schools):
+![Çıktı](https://www.w3schools.com/css/img_temp_startpage.jpg)
+
+Duyarlı bir web tasarımı yapmak için HTML ve CSS'in resize, hide, shrink veya enlarge gibi özelliklerini kullanarak sitemizi tasarlamamız gerekir. (Bu şekilde tasarlandığında masaüstü cihazınızda, tabletinizde, telefonunuzda ve laptopta güzel gözükecektir.)
+
+Bunun için viewport özelliğini ayarlamamız gerekir. (Yukarıda detaylı bahsettiğim için tekrardan detaylı değinmeyeceğim)
+
+`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+
+## Duyarlı Görseller
+Duyarlı görseller tarayıcınızın boyutuna göre ekrana sığan görsellerdir. Bunun için aşağıdaki şekilde kullanırız.
+Daha doğru bir yapı için max-width özelliği de kullanılabilir.
+
+`<img src="img_girl.jpg" style="max-width:100%;height:auto;">`
+
+## Tarayıcı Genişliğine Göre Farklı Görseller Gösterme
+`<picture>` elementi farklı ekran boyutlarında farklı görsellerin çıktı olarak verilmesini sağlar.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h2>Tarayıcı Genişliğine Göre Farklı Görseller Gösterme
+
+</h2>
+<p>Tarayıcınızın boyutunu 600px ve 1500px olarak değiştirin</p>
+
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset="flowers.jpg">
+  <img src="img_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+
+</body>
+</html>
+```
+
+## Duyarlı Metin Boyutu
+
+Metin boyutu, "görünüm alanı genişliği" anlamına gelen bir "vw" birimi ile ayarlanabilir.
+
+Bu şekilde metin boyutu tarayıcı penceresinin boyutunu takip edecektir.
+`<h1 style="font-size:10vw">Selam THT</h1>`
+
+## Media Queries(Medya Sorguları)
+Görselleri ve metinleri yeniden boyutlandırabilmek için yukarıda bahsettiğimiz özelliklerin yanı sıra media queries de kullanılabilir.
+Media Queries ile birlikte farklı ekran boyutları için farklı stiller oluşturabilirsiniz.
+
+Aşağıdaki üç div öğesinin büyük ekranlarda yatay olarak görüntüleneceğini ve küçük ekranlarda dikey olarak istifleneceğini görmek için tarayıcı penceresini yeniden boyutlandırın:
+```
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.left {
+  background-color: #2196F3;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+.main {
+  background-color: #f1f1f1;
+  padding: 20px;
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color: #04AA6D;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Media Queries(Medya Sorguları)
+
+</h2>
+<p>Tarayıcı boyutunu değiştirin.</p>
+
+<p>Bu çerçeveyi yeniden boyutlandırırken 800 pikselde kesme noktasına ulaştığınızdan emin olun.</p>
+
+<div class="left">
+  <p>Sol Menü</p>
+</div>
+
+<div class="main">
+  <p>Ana İçerik</p>
+</div>
+
+<div class="right">
+  <p>Sağ İçerik</p>
+</div>
+
+</body>
+</html>
+```
+
+

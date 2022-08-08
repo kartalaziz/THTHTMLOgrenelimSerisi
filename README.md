@@ -837,3 +837,218 @@ Gri tonları genellikle ton ve doygunluk 0'a ayarlanarak ve daha koyu/daha açı
 ![Çıktı](https://i.hizliresim.com/eipshea.png)
 
 # Bölüm 5
+
+## HTML Stilleri - CSS
+CSS'in açılımı Cascading Style Sheets'dir.
+CSS çok fazla iş tasarrufu sağlar. Aynı anda birden fazla websitesinin düzenini kontrol edebilir.
+
+### CSS nedir?
+CSS website düzenini biçimlendirmek için kullanılır.
+CSS ile birlikte rengi, yazı tipini, yazı boyutunu, elementler arasındaki boşluğu ve elementlerin pozisyonunu, arka plandaki görseli ve ekran boyutunu ayarlayabilirsiniz.
+
+#### CSS'i Kullanmak
+HTML dökümanlarına 3 şekilde CSS'i ekleyebilirsiniz:
+1 - Inline(Satır içi) - HTML öğelerinin içindeki style özelliğini kullanarak
+2 - Internal(Dahili) - `<head>` bölümünde bir `<style>` özelliğini kullanarak
+3 - External(Harici) - harici bir CSS dosyasına bağlanmak için bir `<link>` özelliğini kullanarak
+CSS'i eklemenin en yaygın yolu, stilleri external(harici) CSS dosyalarının dışında tutmaktır.
+
+## Satır İçi(Inline) CSS
+
+Tek bir HTML öğesine benzersiz bir still uygulamak için satır içi(Inline) CSS kullanılır.
+
+Satır içi(Inline) CSS, bir HTML öğesinin style özelliği kullanır.
+
+Aşağıdaki örnek, `<h1>` öğesinin rengini maviye ve `<p>` öğesinin rengini kırmızıya ayarlar:
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color:blue;">Mavi bir başlık.</h1>
+
+<p style="color:red;">Kırmızı bir paragraf</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/2nltp4t.png)
+
+## Dahili(Internal) CSS
+
+Tek bir HTML sayfası için bir still tanımlamak için dahili(Internal) bir CSS kullanılır.
+
+Bir HTML sayfasının <head> bölümünde, bir `<style>` elementi içinde dahili bir CSS tanımlanır.
+Aşağıdaki örnek, tüm `<h1>` öğelerinin metin rengini maviye ve tüm `<p>` öğelerinin metin rengini kırmızıya ayarlar. Ayrıca, sayfa "pudra mavisi" arka plan rengiyle görüntülenecektir:
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
+<body>
+
+<h1>THT</h1>
+<p>#GreenTeam</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/cze6lou.png)
+
+## Harici(External) CSS
+Birçok HTML sayfasının stilini tanımlamak için harici bir style sayfası kullanılır.
+
+Harici bir style sayfası kullanmak için, her HTML sayfasının `<head>` bölümüne bir bağlantı ekleyin:
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>THT</h1>
+<p>vancoondehni HTML Öğrenelim Serisi</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/pp0otld.png)
+
+## CSS Renkleri, Yazı Tipleri ve Boyutları
+
+color özelliği CSS'te metin rengini tanımlamak için kullanılır.
+
+font-family özelliği CSS'te yazı tipini tanımlamak için kullanılır.
+
+font-size özelliği CSS'te metin boyutunu tanımlamak için kullanılır.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 300%;
+}
+p {
+  color: red;
+  font-family: courier;
+  font-size: 160%;
+}
+</style>
+</head>
+<body>
+
+<h1>HTML öğrenmek keyifli</h1>
+<p>-vancoondehni</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/353tds9.png)
+
+## CSS'te Kenarlar
+border özelliği ile HTML elementlerinin etrafını sınırlayabiliriz.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  border: 2px solid powderblue;
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Border Özelliği</h1>
+
+<p>Merhabalar</p>
+<p>ben.</p>
+<p>Aziz aka vancoondehni</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/fwyee9z.png)
+
+## CSS Padding
+CSS padding özelliği, metin ve kenarlık arasında bir boşluk tanımlar.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  border: 2px solid powderblue;
+  padding: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>Padding Özelliği</h1>
+
+<p>THT</p>
+<p>#GreenTeam</p>
+<p>Altay ve Eşref Hocalarıma selamlar</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/316u9do.png)
+
+## CSS Margin(Kenar Boşluğu)
+CSS kenar boşluğu özelliği, sınırın dışında bir kenar boşluğu tanımlar.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  border: 2px solid powderblue;
+  margin: 50px;
+}
+</style>
+</head>
+<body>
+
+<h1>Margin Özelliği</h1>
+
+<p>#SafakBey</p>
+<p>#W1sdom</p>
+<p>#deltaturk</p>
+
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/n557gnh.png)
+
+## Harici CSS'e Link Eklemek
+Harici style sayfalarına tam bir URL veya web sayfasına göre bir yolla(path) başvurulabilir.
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://www.turkhackteam.org">
+</head>
+<body>
+
+<h1>THT</h1>
+<p>vancoondehni</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/qlrqqp7.png)
+
+# Bölüm 6
+

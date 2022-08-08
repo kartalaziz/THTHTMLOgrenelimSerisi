@@ -3734,6 +3734,7 @@ Sıklıkla iki blok seviyesinde element kullanılır. Bunlar `<p>` ve `<div>` el
 ![Çıktı](https://i.hizliresim.com/ntmtnui.png)
 
 HTML'de blok seviyesindeki elementler:
+```
 <address>
 <article>
 <aside>
@@ -3763,13 +3764,14 @@ HTML'de blok seviyesindeki elementler:
 <tfoot>
 <ul>
 <video>
-
+```
 ## Satır İçi Elementler
 Satır içi bir element yeni bir satırla başlamaz.
 
 Satır içi elementler sadece gerektiği kadar boşluğu doldururlar.
 ![Çıktı](https://i.hizliresim.com/r8sfd0q.png)
 HTML'de satır içi elementler:
+```
 <a>
 <abbr>
 <acronym>
@@ -3803,7 +3805,7 @@ HTML'de satır içi elementler:
 <time>
 <tt>
 <var>
-
+```
 Not: Bir satır içi element blok seviyesinde bir elementi bünyesinde barındıramaz.
 
 ## <div> Elementi

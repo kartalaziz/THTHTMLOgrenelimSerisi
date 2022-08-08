@@ -3714,3 +3714,367 @@ Varsayılan olarak sıralı listeler saymaya 1'den başlar. Eğer farklı bir sa
 ![Çıktı](https://i.hizliresim.com/2x33vum.png)
 
 # Bölüm 10
+
+## HTML'de Blok ve Satır İçi Elementler
+Her bir HTML elementi varsayılan(default) bir çıktı verir. Bu çıktı elementin hangi türde olduğuna göre değişiklik gösterir.
+
+İki tür çıktı değeri vardır: Blok ve Satır içi
+
+## Blok Seviyesinde Elementler
+Blok seviyesinde bir element her zaman yeni bir satırla başlar ve tarayıcı otomatik olarak elementin önüne ve arkasına biraz boşluk ekler.
+
+Blok seviyesinde bir element her zaman mevcut tüm genişliği kapsar.(olabildiğince sağa ve sola doğru yayılır)
+
+Sıklıkla iki blok seviyesinde element kullanılır. Bunlar `<p>` ve `<div>` elementleridir.
+
+`<p>` elementi HTML dökümanlarında bir paragraf tanımlarken kullanılır.
+
+`<div>` elementi HTML dökümanlarında bir bölümü tanımlar.
+
+![Çıktı](https://i.hizliresim.com/ntmtnui.png)
+
+HTML'de blok seviyesindeki elementler:
+<address>
+<article>
+<aside>
+<blockquote>
+<canvas>
+<dd>
+<div>
+<dl>
+<dt>
+<fieldset>
+<figcaption>
+<figure>
+<footer>
+<form>
+<h1> - <h6>
+<header>
+<hr>
+<li>
+<main>
+<nav>
+<noscript>
+<ol>
+<p>
+<pre>
+<section>
+<table>
+<tfoot>
+<ul>
+<video>
+
+## Satır İçi Elementler
+Satır içi bir element yeni bir satırla başlamaz.
+
+Satır içi elementler sadece gerektiği kadar boşluğu doldururlar.
+![Çıktı](https://i.hizliresim.com/r8sfd0q.png)
+HTML'de satır içi elementler:
+<a>
+<abbr>
+<acronym>
+<b>
+<bdo>
+<big>
+<br>
+<button>
+<cite>
+<code>
+<dfn>
+<em>
+<i>
+<img>
+<input>
+<kbd>
+<label>
+<map>
+<object>
+<output>
+<q>
+<samp>
+<script>
+<select>
+<small>
+<span>
+<strong>
+<sub>
+<sup>
+<textarea>
+<time>
+<tt>
+<var>
+
+Not: Bir satır içi element blok seviyesinde bir elementi bünyesinde barındıramaz.
+
+## <div> Elementi
+`<div>` elementi sıklıkla diğer HTML elementlerini kapsayacağı şekilde kullanılır.
+
+`<div>` elementi özniteliğe ihtiyaç duymaz. Fakat style, class ve id ortaktır.
+
+CSS ile birlikte kullanıldığında içeriğin bloklarını şekillendirebilirsiniz.
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<div style="background-color:black;color:white;padding:20px;">
+  <h2>THT</h2>
+  <p>Türk Hack Team 2002 yılında Arsenik tarafından kurulmuş olan siber güvenlik platformudur.</p>
+  <p>Türk Hack Team bünyesinde çeşitli ekipleri barındıran Türkiye'nin en büyük siber güvenlik platformudur.</p>
+</div>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/kgzvge2.png)
+
+## <span> Elementi
+`<span>` elementi bir dökümanın bir parçasını veya bir metnin bir parçasını işaretlemek için kullanılan satır içi bir kapsayıcıdır.
+
+`<span>` elementi özniteliğe ihtiyaç duymaz. Fakat style, class ve id ortaktır.
+
+CSS ile birlikte kullanıldığında metnin stilini değiştirebilirsiniz.
+```
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>span Elementi</h1>
+
+<p>THT'nin en iyi içerik üreten ekibi <span style="color:green;font-weight:bold">Green Team</span> forum üyeleri için detaylı içerikler hazırlarlar.  <span style="color:blue;font-weight:bold">Basın Medya</span> ekibi ise bu içeriklerin tanıtmını yapmaktadır.</p>
+
+</body>
+</html>
+
+```
+![Çıktı](https://i.hizliresim.com/hunn0sy.png)
+
+## HTML'de class Özelliği
+class özelliği bir HTML elementinin sınıfını belirtmek için kullanılır.
+
+Birden fazla HTML elementi aynı sınıfta olabilir.
+
+class özelliği genellikle bir style sayfasında bir sınıf adını işaret etmek için kullanılır. Belirli sınıf adına sahip öğelere erişmek ve bunları değiştirmek için bir JavaScript tarafından da kullanılabilir.
+
+Aşağıdaki örnekte, "city" değerine sahip bir sınıf özelliğinde üç `<div>` elemanımız var. Üç <div> elementinin tümü, başlık bölümündeki .city style tanımına göre eşit şekilde stillendirilecektir:
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="city">
+<h2>Londra</h2>
+<p>Londra İngiltere'nin başkentidir.</p>
+</div>
+
+<div class="city">
+<h2>Paris</h2>
+<p>Paris Fransa'nın başkentidir.</p>
+</div>
+
+<div class="city">
+<h2>Tokyo</h2>
+<p>Tokyo Japonya'nın başkentidir..</p>
+</div>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/of91wr8.png)
+
+İpucu: class özelliği her HTML elementinde kullanılabilir.
+
+Not: class name(sınıf özelliği) büyük harf-küçük harf duyarlılığına sahiptir.(case sensitive)
+
+## class Özelliği için Sözdizimi(syntax)
+Bir sınıf oluşturabilmek için bir nokta (.) karakteri ve ardından bir sınıf adı(class name) yazın. Ardından, küme parantezleri {} içinde CSS özelliklerini tanımlayın.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>class Özelliği</h2>
+<p>"city" sınıf adı ile elementleri şekillendirmek için CSS kullanın:</p>
+
+<h2 class="city">Londra</h2>
+<p>Londa İngiltere'nin başkentidir.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris Fransa'nın başkentidir.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo Japonya'nın başkentidir.</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/mpthjs6.png)
+
+## Çoklu Sınıflar(Multiple Classes)
+HTML elementleri birden fazla sınıfa ait olabilirler.
+
+Çoklu sınıflar tanımlamak için sınıf adlarını bir boşlukla ayırın, örneğin `<div class="city main">`. Öğe, belirtilen tüm sınıflara göre şekillendirilecektir.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+
+.main {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Çoklu Sınıflar(Multiple Classes)
+
+</h2>
+<p>HTML elementleri birden fazla sınıfa ait olabilirler.
+
+</p>
+
+<h2 class="city main">London</h2>
+<h2 class="city">Paris</h2>
+<h2 class="city">Tokyo</h2>
+
+</body>
+</html>
+```
+
+![Çıktı](https://i.hizliresim.com/sz5ha81.png)
+
+## Farklı Elementler Aynı Sınıfı Paylaşabilir
+Farklı HTML elementleri aynı sınıf adını işaret edebilirler.
+
+Aşağıdaki örnekte `<h2>` ve `<p>` elementleri "city" sınıfını işaret etmektedir. Ayrıca aynı stili paylaşacaklardır:
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>Farklı Elementler Aynı Sınıfı Paylaşabilir
+
+</h2>
+
+<p>İki HTML elementi aynı etiket ismine sahip olmasa bile aynı sınıfı işaret edebilirler ve CSS ile birlikte aynı görünümü elde edebilirler.</p>
+
+<h2 class="city">Paris</h2>
+<p class="city">Paris Fransa'nın başkentidir.</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/3jln0aq.png)
+
+## class Özelliğini JavaScript'te Kullanmak
+
+Sınıf adı(class name), belirli elementler için belirli görevleri gerçekleştirmek amacıyla JavaScriptte kullanılabilir.
+
+JavaScript, getElementsByClassName() yöntemiyle belirli bir sınıf adına sahip öğelere erişebilir.
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>class Özelliğini JavaScript'te Kullanmak</h2>
+<p>"city" sınıf adıyla tüm özellikleri saklamak için butona basınız</p>
+
+<button onclick="myFunction()">Elementleri sakla</button>
+
+<h2 class="city">London</h2>
+<p>Londra İngiltere'nin başkentidir.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris Fransa'nın başkentidir.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo Japonya'nın başkentidir.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementsByClassName("city");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/1tsextg.png)
+"Elementleri sakla" butonuna bastığımızda ekrandaki çıktı:
+![Çıktı](https://i.hizliresim.com/jp8x1vu.png)
+
+## id Özelliği
+
+id özelliği HTML elementleri için eşsiz bir id tanımlamak için kullanılır.
+Bir HTML dökümanında aynı id'ye sahip birden fazla element bulunamaz.
+id özelliği, bir style sayfasında belirli bir stil bildirimine işaret etmek için kullanılır. Ayrıca JavaScript tarafından belirli bir kimliğe sahip öğeye erişmek ve bunları işlemek için kullanılır.
+id özelliği için sözdizimi: `#` işaretinden sonra id ismini yazarız. Sonrasında CSS özelliklerinden `{}` işaretlerini kullanırız.
+
+Aşağıdaki örnekte, "myHeader" id'sine işaret eden bir `<h1>` elemanımız var. Bu `<h1>` öğesi, head bölümündeki #myHeader style tanımına göre biçimlendirilecektir:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>id Özelliği</h2>
+<p>
+"myHeader" kimliğine sahip bir öğeye stil vermek için CSS kullanın:</p>
+
+<h1 id="myHeader">My Header</h1>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/k9icfqt.png)
+Not: id ismi küçük harf-büyük harf duyarlılığına sahiptir.(case sensitive)
+Not: id isimleri en az bir karakter içermek zorundadır. id isimleri numara ile başlayamaz ve boşluk içeremez.

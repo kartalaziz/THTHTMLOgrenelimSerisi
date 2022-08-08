@@ -3508,3 +3508,209 @@ table, th, td {
 ![Çıktı](https://i.hizliresim.com/hntovpg.png)
 
 # Bölüm 9
+
+## HTML'de Listeler
+
+### Sırasız(Unordered) HTML Listeleri
+Sırasız bir HTML listesi `<ul>` etiketiyle başlar. Listedeki her bir madde `<li>` etiketiyle tanımlanır.
+
+Liste elementleri varsayılan olarak madde işaretleri (küçük siyah daireler) ile işaretlenecektir.
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sırasız(Unordered) HTML Listeleri</h2>
+
+<ul>
+<li>Selamın Aleyküm</li>
+<li>THT</li>
+<li>HTML'de Listeler</li>
+</ul>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/rvqjyl6.png)
+
+Listelerin başındaki * işaretleri farklı tiplerde olabilir. Bu tipleri belirlemek için CSS'in list-style-type özelliği kullanılır.
+
+Örnek kullanımlar: 
+`<ul style="list-style-type:disc;">`
+
+`<ul style="list-style-type:circle;">`
+
+`<ul style="list-style-type:square;">`
+
+`<ul style="list-style-type:none;">`
+
+## Sıralı(Ordered) HTML Listeleri
+Sırali bir HTML listesi `<ol>` etiketiyle başlar. Her bir madde `<li>` etiketiyle tanımlanır.
+Liste elementleri varsayılan olarak sayılarla işaretlenecektir.
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sıralı HTML Listeleri</h2>
+
+<ol>
+<li>Real Madrid</li>
+<li>Barcelona</li>
+<li>Çorumspor</li>
+</ol>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/14po1di.png)
+
+## Sıralı HTML Listelerinde type Özelliği
+type özelliği `<ol>` etiketiyle birlikte kullanıldığında liste elementlerinin türünü tanımlar.
+
+![Çıktı](https://i.hizliresim.com/6mx6wzr.png)
+Örnek kullanımlar:
+`<ol type="1">`
+
+`<ol type="A">`
+
+`<ol type="a">`
+
+`<ol type="I">`
+
+`<ol type="i">`
+
+## HTML Açıklama Listeleri(Description Lists)
+HTML açıklama listelerini destekler.
+
+Açıklama listesi, bir terimin açıklamasıyla birlikte sıralandığı listelerdir.
+
+`<dl>` etiketi açıklama listelerini tanımlamak için kullanılır. `<dt>` etiketi açılanacak terimi ifade ederken kullanılır,` <dd> `etiketiyse açıklama kısmını içerir.
+```
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Açıklama listeleri</h2>
+
+<dl>
+<dt>Satoshi Nakamoto</dt>
+<dd>-Bitcoin'in mucidi olan, kim olduğu bilinmeyen kişi, grup</dd>
+<dt>Vitalik</dt>
+<dd>-Ethereum'un ağası</dd>
+</dl>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/pzeoeln.png)
+
+## Gömülü HTML Listeleri(Nested Lists)
+Listeler iç içe oluşturulabilir.
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Gömülü HTML Listeleri(Nested Lists)
+
+</h2>
+<p>Listeler iç içe oluşturulabilir.</p>
+
+<ul>
+<li>Blue Team</li>
+<li>Green Team
+<ul>
+<li>İçerik Ekibi</li>
+<li>Proje Ekibi</li>
+</ul>
+</li>
+<li>Anka Red Team</li>
+</ul>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/4zyrvhp.png)
+
+## CSS ile Yatay Liste Oluşturmak
+HTML listeleri CSS kullanılarak farklı görünümlerde oluşturulabilir.
+Popüler liste oluşturma yollarından birisi yatay liste oluşturmaktır.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333333;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 16px;
+text-decoration: none;
+}
+
+li a:hover {
+background-color: #111111;
+}
+</style>
+</head>
+<body>
+
+<h2>Navigasyon Menüsü</h2>
+<p>Bu örnekte yatay listeleri daha iyi anlaşılır kılmak için navigasyon menüsü oluşturuyoruz.</p>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/chejrma.png)
+
+## Kontrol Listelerinde Sayım
+Varsayılan olarak sıralı listeler saymaya 1'den başlar. Eğer farklı bir sayıdan saymaya başlamasını istiyorsanız start özelliğini kullanabilirsiniz.
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>start Özelliği</h2>
+<p>Varsayılan olarak sıralı listeler saymaya 1'den başlar. Eğer farklı bir sayıdan saymaya başlamasını istiyorsanız start özelliğini kullanabilirsiniz.
+
+</p>
+
+<ol start="50">
+<li>Ahmet</li>
+<li>Mahmut</li>
+<li>Ayşe</li>
+</ol>
+
+<ol type="I" start="50">
+<li>Caner</li>
+<li>Cülcül</li>
+<li>Berkecan</li>
+</ol>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/2x33vum.png)
+
+# Bölüm 10

@@ -1797,3 +1797,1714 @@ img öğesi, resim öğesini desteklemeyen tarayıcılar için veya kaynak etike
 ```
 ![Çıktı](https://i.hizliresim.com/j94y0lp.png)
 
+# Bölüm 8
+
+## HTML'de Favicon
+Favicon internet sitelerini açtığımızda sayfa başlığının yanında gözüken küçük görsellerdir. Örnek verecek olursak:
+
+![Çıktı](https://i.hizliresim.com/sdmhf5d.png)
+
+THT'yi ziyaret ettiğinizde sayfa başlığının yanında THT Logosunu görüyorsunuz. İşte buraya konulan görsel Favicon olarak adlandırılır.
+
+### HTML'de Favicon Nasıl Eklenir?
+
+Her görseli favicon olarak ekleyebilirsiniz. Hatta kendi favicon tasarımınızı da yapabilirsiniz.
+
+Kendi favicon tasarımınızı yapabileceğiniz bir site önerisi: favicon.cc
+
+İnternet sitenize favicon eklemek için root kısmında images adıyla bir dosya oluşturunuz. Bu dosyanın içine favicon olarak kullanmak istediğiniz görseli aktarınız.
+
+NOT: Favicon eklerken genellikle kullanılan adlandırma: favicon.ico
+
+Sonrasında index.html dosyanıza `<title>` elementinden sonra bir `<link>` elementi ekleyin.
+
+Son olarak index.html dosyasını kaydedin ve internet sitenizi yenileyin. Artık favicon görseliniz sitenize eklenmiş olacaktır.
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <title>vancoondehni</title>
+  <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC_5HSEFL27dWyQlK6gG8PMdkVZeO9Cb6iMg&usqp=CAU">
+</head>
+<body>
+
+<h1>Selamlar THT</h1>
+<p>Favicon - örnek</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/6wgxwsf.png)
+
+## HTML'de Tablolar
+Tablolar verileri kolonlara ve sütunlara ayırarak düzenlememizi sağlar.
+
+HTML'de tablolar, satırlar ve sütunlar içindeki tablo hücrelerinden oluşur.
+
+### Tablo Hücreleri
+Her bir tablo hücresi `<td>` ve `</td>` etiketleriyle tanımlanır.
+
+Not: td etiketinin açılımı: table data
+
+`<td>` ve `</td>` etiketleri arasındaki tüm içerik o hücrenin içeriğidir.
+
+Not: table data elementleri, tablonun veri kapsayıcılarıdır.
+
+Her türlü HTML elementini içerebilirler; metin, resimler, listeler, diğer tablolar vb.
+```
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+border:1px solid black;
+}
+</style>
+<body>
+
+<h2>TD elementi tablo hücrelerini tanımlarken kullanılır.</h2>
+
+<table style="width:100%">
+<tr>
+<td>TürkHackTeam</td>
+<td>Bulunduğu Team</td>
+<td>Kullanıcı Adı</td>
+</tr>
+</table>
+
+<p>Örneği daha iyi anlayabilmeniz için border yani sınır kısımlarını ekledik.</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/i0w7u69.png)
+
+### Tablo Satırları
+Her bir tablo satırı `<tr>` etiketi ile başlar ve `</tr>` etiketi ile biter.
+
+Not: tr etiketinin açılımı table row
+
+Bir tabloya istediğiniz kadar satır ekleyebilirsiniz, sadece her satırdaki hücre sayısının aynı olduğuna dikkat edin.
+```
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>TR elementi tablo satırlarını tanımlamak için kullanılır</h2>
+
+<table style="width:100%">
+  <tr>
+    <td>THT Kullanıcı Adı</td>
+    <td>Bulunduğu Ekip</td>
+    <td>Rütbesi</td>
+  </tr>
+  <tr>
+    <td>vancoondehni</td>
+    <td>GreenTeam</td>
+    <td>Mod</td>
+  </tr>
+</table>
+
+<p>Örneği daha iyi anlayabilmeniz için tabloya sınırlar ekledik(border özelliği ile).</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/eoo14n6.png)
+
+### Tablo Başlıkları
+Bazen hücrelerin başlık olmasını isteyebilirsiniz. Bu durumda `<td>` etiketi yerine `<th>` etiketini kullanıyoruz.
+
+Varsayılan başlıklar kalın, ortalanmış haldedirler. Değiştirmek için CSS'i kullanabilirsiniz.
+```
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>TH elementi tablolardaki başlıkları tanımlamak için kullanılır</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>THT Kullanıcı Adı</th>
+    <th>Bulunduğu Ekip</th>
+    <th>Ekipteki rölü</th>
+  </tr>
+  <tr>
+    <td>vancoondehni</td>
+    <td>GreenTeam</td>
+    <td>Mod</td>
+  </tr>
+  <tr>
+    <td>ALTAY'</td>
+    <td>GreenTeam</td>
+    <td>Genel Sorumlu</td>
+   </tr>
+   <tr>
+    <td>Eşref'</td>
+    <td>GreenTeam</td>
+    <td>Genel Sorumlu</td>
+  </tr>
+</table>
+
+<p>Örneğin anlaşılırlığını arttırmak için border yani sınır özelliği eklenmiştir.</p>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/id5a3lg.png)
+
+![Table](https://i.hizliresim.com/1zihog2.png)
+
+### HTML'de Tablo Sınırları
+
+HTML'de farklı boyutlarda ve biçimlerde tablo sınırları tanımlamak mümkündür.
+
+##### Nasıl bir sınır eklenir?
+Bir tabloya kenarlık eklediğinizde, her bir tablo hücresinin çevresine de kenarlıklar eklersiniz. 
+![Çıktı](https://i.hizliresim.com/4fj02zx.png)
+Tablolara sınır eklemek için CSS'in border özelliğini table,th ve td elementlerinde kullanmalıyız.
+```
+table, th, td {
+  border: 1px solid black;
+}
+
+```
+## Daraltılmış Tablo Sınırları(Kenarlıkları)
+Tablolarda ikili kenarlıklar eklemek istemiyorsal CSS'in `border-collapse` özelliği `collapse` ile kullanılır.
+
+Bu tablolarda tek kenarlığa sahip olmanızı sağlar.
+![Çıktı](https://i.hizliresim.com/d7znw6m.png)
+```
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Daraltılmış Tablo Sınırları(Kenarlıkları)
+
+</h2>
+<p>Tablolarda ikili kenarlıklar eklemek istemiyorsal CSS'in border-collapse özelliği collapse ile kullanılır.
+
+</p>
+
+<table style="width:100%">
+   <tr>
+
+    <th>THT Kullanıcı Adı</th>
+
+    <th>Bulunduğu Ekip</th>
+
+    <th>Ekipteki rölü</th>
+
+  </tr>
+
+  <tr>
+
+    <td>vancoondehni</td>
+
+    <td>GreenTeam</td>
+
+    <td>Mod</td>
+
+  </tr>
+
+  <tr>
+
+    <td>ALTAY'</td>
+
+    <td>GreenTeam</td>
+
+    <td>Genel Sorumlu</td>
+
+   </tr>
+
+   <tr>
+
+    <td>Eşref'</td>
+
+    <td>GreenTeam</td>
+
+    <td>Genel Sorumlu</td>
+
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/trkxzur.png)
+
+## Style Tablo Kenarlıkları
+Her hücrenin arka plan rengini ayarlarsanız ve kenarlığa beyaz bir renk verirseniz, görünmez bir kenarlık izlenimi elde edersiniz.
+![Çıktı](https://i.hizliresim.com/83mq3uz.png)
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}
+</style>
+</head>
+<body>
+
+<h2>Görünmez Kenarlıklarla Tablo Oluşturmak</h2>
+
+<p>Her hücrenin arka plan rengini ayarlarsanız ve kenarlığa beyaz bir renk verirseniz, görünmez bir kenarlık izlenimi elde edersiniz.
+
+</p>
+
+<table style="width:100%">
+   <tr>
+
+
+
+    <th>THT Kullanıcı Adı</th>
+
+
+
+    <th>Bulunduğu Ekip</th>
+
+
+
+    <th>Ekipteki rölü</th>
+
+
+
+  </tr>
+
+
+
+  <tr>
+
+
+
+    <td>vancoondehni</td>
+
+
+
+    <td>GreenTeam</td>
+
+
+
+    <td>Mod</td>
+
+
+
+  </tr>
+
+
+
+  <tr>
+
+
+
+    <td>ALTAY'</td>
+
+
+
+    <td>GreenTeam</td>
+
+
+
+    <td>Genel Sorumlu</td>
+
+
+
+   </tr>
+
+
+
+   <tr>
+
+
+
+    <td>Eşref'</td>
+
+
+
+    <td>GreenTeam</td>
+
+
+
+    <td>Genel Sorumlu</td>
+
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/7ygkfr2.png)
+
+### Yuvarlak Tablo Kenarları
+`border-radius` özelliği ile kenarları yuvarlaklaştırılmış tablolar elde edebilirsiniz.
+![Çıktı](https://i.hizliresim.com/a7fpra1.png)
+Yukarıdaki görseli elde etmek için kullanacağınız table kodları:
+```
+table, th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+```
+Tablonun kenarındaki kenarlıkları yok etmek istiyorsanız table etiketini çıkartmanız gerekir.
+![Çıktı](https://i.hizliresim.com/ak0b8om.png)
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>Yuvarlak Tablo Kenarları
+
+</h2>
+
+<p>border-radius özelliği ile kenarları yuvarlaklaştırılmış tablolar elde edebilirsiniz.
+Tablonun kenarındaki kenarlıkları yok etmek istiyorsanız table etiketini çıkartmanız gerekir.
+
+
+
+</p>
+
+<table style="width:100%">
+  <tr>
+
+
+    <th>THT Kullanıcı Adı</th>
+
+    <th>Bulunduğu Ekip</th>
+
+    <th>Ekipteki rölü</th>
+
+  </tr>
+
+  <tr>
+
+    <td>vancoondehni</td>
+
+    <td>GreenTeam</td>
+
+    <td>Mod</td>
+
+  </tr>
+
+  <tr>
+
+    <td>ALTAY'</td>
+
+    <td>GreenTeam</td>
+
+    <td>Genel Sorumlu</td>
+
+   </tr>
+
+   <tr>
+
+    <td>Eşref'</td>
+
+    <td>GreenTeam</td>
+
+    <td>Genel Sorumlu</td>
+
+
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/e5mdzwo.png)
+
+## Noktalı Tablo Kenarları
+`border-style` özelliğini kullanarak tabloların kenarlarını noktalı hale getirebilirsiniz.
+![Çıktı](https://i.hizliresim.com/9z2gr06.png)
+
+### Kenarlık Rengi
+`border-color` özelliği ile tabloların kenarlık renklerini değiştirebilirsiniz.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+th, td {
+  border-style:solid;
+  border-color: #96D4D4;
+}
+</style>
+</head>
+<body>
+
+<h2>Kenarlık Rengi
+
+</h2>
+
+<p>border-color özelliği ile tabloların kenarlık renklerini değiştirebilirsiniz.
+
+</p>
+
+<table style="width:100%">
+  <tr>
+
+
+    <th>THT Kullanıcı Adı</th>
+
+
+    <th>Bulunduğu Ekip</th>
+
+
+    <th>Ekipteki rölü</th>
+
+
+  </tr>
+
+
+  <tr>
+
+
+    <td>vancoondehni</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Mod</td>
+
+
+  </tr>
+
+
+  <tr>
+
+
+    <td>ALTAY'</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Genel Sorumlu</td>
+
+
+   </tr>
+
+
+   <tr>
+
+
+    <td>Eşref'</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Genel Sorumlu</td>
+
+
+
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/ri0xhor.png)
+
+## HTML'de Tablo Boyutları
+
+Tablolarının her sütun, satır veya tüm tablo için farklı boyutları olabilir.
+
+`style` özelliğini kullanarak `width` ve `height` ile tablo, sütun ve satır boyutlarını değiştirebilirsiniz.
+
+### Tablo Genişliği
+Tablonun genişliğini değiştirmek için style özelliğini `<table>` etiketinde kullanmalıyız.
+```
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+</style>
+
+<body>
+
+<h2>%200 Genişlikte Bir HTML Tablosu</h2>
+
+<table style="width:200%">
+   <tr>
+
+
+    <th>THT Kullanıcı Adı</th>
+
+    <th>Bulunduğu Ekip</th>
+
+    <th>Ekipteki rölü</th>
+
+  </tr>
+
+  <tr>
+
+    <td>vancoondehni</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Mod</td>
+
+
+
+  </tr>
+
+
+  <tr>
+
+
+    <td>ALTAY'</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Genel Sorumlu</td>
+
+
+   </tr>
+
+
+   <tr>
+
+    <td>Eşref'</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Genel Sorumlu</td>
+
+
+
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/bk4a9xe.png)
+
+### Hücre Genişliği
+Belirli bir sütunun boyutunu ayarlamak için, bir `<th>` veya `<td>` öğesine style özelliğini ekleyebilirsiniz.
+```
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body>
+
+<h2>THT Kullanıcı Adı hücresinin genişliği %120</h2>
+
+<table style="width:100%">
+ 
+ 
+   <tr>
+
+
+    <th style="width:120%">THT Kullanıcı Adı</th>
+
+
+
+    <th>Bulunduğu Ekip</th>
+
+
+
+    <th>Ekipteki rölü</th>
+
+
+  </tr>
+
+
+
+  <tr>
+
+
+    <td>vancoondehni</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Mod</td>
+
+
+  </tr>
+
+
+  <tr>
+
+
+    <td>ALTAY'</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Genel Sorumlu</td>
+
+
+
+   </tr>
+
+
+   <tr>
+
+    <td>Eşref'</td>
+
+
+    <td>GreenTeam</td>
+
+
+    <td>Genel Sorumlu</td>
+
+
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/i2q3qro.png)
+
+### Tablo Satır Yüksekliği
+
+Belirli bir satırın yüksekliğini ayarlamak için, bir tablo satırı elementine `style` özelliği eklenir.
+```
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<body>
+
+<h2>İkinci sütunun boyutu %200</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>THT Kullanıcı Adı</th>
+    <th>Bulunduğu Ekip</th>
+    <th>Ekipteki Rolü</th>
+  </tr>
+  <tr style="height:200px">
+    <td>a</td>
+    <td>b</td>
+    <td>c</td>
+  </tr>
+  <tr>
+    <td>d</td>
+    <td>e</td>
+    <td>f</td>
+  </tr>
+  <tr>
+    <td>g</td>
+    <td>h</td>
+    <td>z</td>
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/mnyxk0s.png)
+
+### Tablo Başlıkları
+Tablolar her sütun veya satır için veya birçok sütun/satır için başlık içerebilir.
+![Çıktı](https://i.hizliresim.com/hldpndd.png)
+Tablo başlıkları `<th>` etiketi ile tanımlanırlar.
+
+### Dikey Tablo Başlıkları
+İlk sütunu tablo başlıkları olarak kullanmak için her satırdaki ilk hücreyi `<th>` etiketiyle tanımlarız.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Dikey Tablo Başlıkları
+
+</h2>
+
+<p>İlk sütunu tablo başlıkları olarak kullanmak için her satırdaki ilk hücreyi th etiketiyle tanımlarız.
+
+</p>
+
+<table style="width:100%">
+  <tr>
+    <th>AD</th>
+    <td>Ahmet</td>
+    <td>Kaş</td>
+  </tr>
+  <tr>
+    <th>SOYAD</th>
+    <td>Mehmet</td>
+    <td>Taş</td>
+  </tr>
+  <tr>
+    <th>YAŞ</th>
+    <td>15</td>
+    <td>53</td>
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/hrj4cvv.png)
+
+### Tablo Başlıklarını Hizalamak
+Varsayılan tablo başlıkları kalın ve ortalanmış şekildedir. Başlıkları sağa veya sola yaslamak için CSS'in `text-align` özelliği kullanılır.
+
+Sağa yaslamak için:
+```
+th {
+  text-align: right;
+}
+```
+Sola yaslamak için:
+```
+th {
+  text-align: left;
+}
+```
+### Birden Çok Sütun için Başlık Oluşturmak
+İki veya daha fazla sütuna yayılan bir başlık tanımlamak mümkündür.
+Bunu yapabilmek için colspan özelliğini `<th>` etiketinin içinde kullanmalıyız.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Birden Çok Sütun için Başlık Oluşturmak
+
+</h2>
+
+<p>İki veya daha fazla sütuna yayılan bir başlık tanımlamak mümkündür.
+
+Bunu yapabilmek için colspan özelliğini <th> etiketinin içinde kullanmalıyız.</p>
+
+<table style="width:100%">
+  <tr>
+    <th colspan="2">Kişi</th>
+    <th>Yaş</th>
+  </tr>
+  <tr>
+    <td>Ahmet</td>
+    <td>Kocakafa</td>
+    <td>45</td>
+  </tr>
+  <tr>
+    <td>Celil</td>
+    <td>Cüce</td>
+    <td>15</td>
+  </tr>
+</table>
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/hlan7k4.png)
+
+### Tablo Başlığı
+
+Tüm tablo için bir tablo başlığı ekleyebilirsiniz.
+
+Bunun için table etiketinin içerisine `<caption>` etiketi eklenir.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+
+<h2>Tablo Başlığı</h2>
+<p>Tüm tablo için bir tablo başlığı ekleyebilirsiniz.
+
+Bunun için table etiketinin içerisine caption etiketi eklenir.</p>
+
+<table style="width:100%">
+  <caption>Aylık Yatırımlar</caption>
+  <tr>
+    <th>Aylık</th>
+    <th>Yatırım Miktarı</th>
+  </tr>
+  <tr>
+    <td>Ocak</td>
+    <td>3000TL</td>
+  </tr>
+  <tr>
+    <td>Şubat</td>
+    <td>2000TL</td>
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/3stlfsl.png)
+
+### HTML Tablo Doldurma ve Aralık Ekleme(Padding&Spacing)
+HTML tablolarında, hücrelerin içindeki dolguyu ve hücreler arasındaki boşluğu ayarlayabiliriz.
+![Çıktı](https://i.hizliresim.com/j7nfqll.png)
+Doldurma(Padding): Tablo hücrelerine dolgu eklemek için CSS padding özelliği kullanılır.
+```
+th, td {
+  padding: 15px;
+}
+```
+Aralık Ekleme(Spacing): Tablo hücreleri arasındaki boşluğu değiştirmek için table elementinin içerisinde CSS'in `border-spacing` özelliğini kullanabiliriz.
+```
+table {
+  border-spacing: 30px;
+}
+```
+## HTML Tablolarında Colspan ve Rowspan
+HTML tabloları, birden çok satıra ve/veya sütuna yayılan hücrelere sahip olabilir.
+![Çıktı](https://i.hizliresim.com/9tiygwv.png)
+### Colspan
+Bir hücreyi birden çok sütuna yaymak için `colspan` özelliği kullanılır.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>İki sütuna yayılan hücre</h2>
+<p>Bir hücreyi birden çok sütuna yaymak için colspan özelliği kullanılır.
+
+</p>
+
+<table style="width:100%">
+  <tr>
+    <th colspan="2">Kullanıcı</th>
+    <th>Yaş</th>
+  </tr>
+  <tr>
+    <td>Mahmut</td>
+    <td>Tuncer</td>
+    <td>43</td>
+  </tr>
+  <tr>
+    <td>Ajdar</td>
+    <td>Süperstarxd</td>
+    <td>31</td>
+  </tr>
+</table>
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/ngfsmxl.png)
+
+### Rowspan
+Bir hücreyi birden çok satıra yaymak için `rowspan` özelliği kullanılır.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Rowspan - bir hücreyi 2 satıra yayalım
+
+</h2>
+<p>Bir hücreyi birden çok satıra yaymak için rowspan özelliği kullanılır.
+
+</p>
+
+<table style="width:100%">
+  <tr>
+    <th>Kullanıcı</th>
+    <td>mahmutqral123</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Sosyal Medya Hesapları</th>
+    <td>twitter.com/mahmutqral123</td>
+  </tr>
+  <tr>
+    <td>instagram.com/mahmutqral123</td>
+  </tr>
+</table>
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/2ua06lz.png)
+
+## HTML Tablo Stilleri
+CSS'i kullanarak tablonuzun görünüşünü daha iyi hale getirebilirsiniz.
+
+### HTML Tabloları - Zebra Çizgileri
+Her 2 tablo satırından birisine arka plan rengi eklerseniz, güzel bir zebra çizgili efekti elde edersiniz.
+
+Her 2 satırdan birisini farklı renk yapmak için `:nth-child(even)` özelliği kullanılır.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Tabloları - Zebra Çizgileri
+
+</h2>
+<p>Her 2 tablo satırından birisine arka plan rengi eklerseniz, güzel bir zebra çizgili efekti elde edersiniz.
+
+Her 2 satırdan birisini farklı renk yapmak için :nth-child(even) özelliği kullanılır.</p>
+
+<table>
+  <tr>
+  <th>Kullanıcı Adı</th>
+  <th>Ekip</th>
+  <th>Rol</th>
+  </tr>
+  <tr>
+  <td>SafakBey</td>
+  <td>GreenTeam</td>
+  <td>Mod</td>
+  </tr>
+  <tr>
+  <td>Kuvayihackiye</td>
+  <td>GreenTeam</td>
+  <td>Green Team Senior</td>
+  </tr>
+  <tr>
+  <td>connec</td>
+  <td>GreenTeam</td>
+  <td>Mod</td>
+  </tr>
+  <tr>
+  <td>Reina</td>
+  <td>Basın Medya</td>
+  <td>Lider</td>
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/awyrraj.png)
+
+### HTML Tabloları - Dikey Zebra Çizgileri
+Dikey zebra çizgileri oluşturmak için, her iki sütundan birisine renk vermemiz gerekir.
+
+Bunu yapmak için :nth-child(even) özelliğini kullanırız.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: #D6EEEE;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Tabloları - Dikey Zebra Çizgileri
+
+</h2>
+<p>Dikey zebra çizgileri oluşturmak için, her iki sütundan birisine renk vermemiz gerekir.
+
+Bunu yapmak için :nth-child(even) özelliğini kullanırız.</p>
+
+<table style="width:100%">
+  <tr>
+    <th>MON</th>
+    <th>TUE</th>
+    <th>WED</th>
+    <th>THU</th>
+    <th>FRI</th>
+    <th>SAT</th>
+    <th>SUN</th>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/ch6nuyb.png)
+
+### Dikey ve Yatay Zebra Çizgilerini Birleştirin
+Yukarıdaki iki örnekteki stili birleştirebilirsiniz ve her iki satırda bir ve her iki sütunda bir çizgiler olacaktır.
+
+Bu özelliği kullanabilmek için `rgba()` özelliği ile renkleri belirtmeliyiz.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+</style>
+</head>
+<body>
+
+<h2>Dikey ve Yatay Zebra Çizgilerini Birleştirin
+
+</h2>
+<p>Yukarıdaki iki örnekteki stili birleştirebilirsiniz ve her iki satırda bir ve her iki sütunda bir çizgiler olacaktır.
+
+Bu özelliği kullanabilmek için rgba() özelliği ile renkleri belirtmeliyiz.</p>
+
+<table style="width:100%">
+  <tr>
+    <th>MON</th>
+    <th>TUE</th>
+    <th>WED</th>
+    <th>THU</th>
+    <th>FRI</th>
+    <th>SAT</th>
+    <th>SUN</th>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/8n0qcmp.png)
+
+### Yatay Bölücüler
+Eğer kenarları sadece altta belirtmek istiyorsanız yatay bölücüleri kullanabilirsiniz.
+
+Bunun için tr elementinin içine `border-bottom` özelliği eklenir.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  border-bottom: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Yatay Bölücüler
+
+</h2>
+<p>Eğer kenarları sadece altta belirtmek istiyorsanız yatay bölücüleri kullanabilirsiniz.
+
+Bunun için tr elementinin içine border-bottom özelliği eklenir.</p>
+
+<table>
+  <tr>
+    <th>İsim</th>
+    <th>Soyad</th>
+  <th>Numara</th>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>b</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>c</td>
+    <td>d</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>e</td>
+    <td>r</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>z</td>
+    <td>y</td>
+    <td>4</td>
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/jx2wgva.png)
+
+### Üzerine Geldiğinde Renk Değiştiren Tablo
+`tr` etiketinde `:hover` özelliğini kullanarak mouse bir satırın üstüne geldiğinde farklı renge dönen(efekt) tablolar oluşturabilirsiniz.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #D6EEEE;}
+</style>
+</head>
+<body>
+
+<h2>Üzerine Geldiğinde Renk Değiştiren Tablo
+
+</h2>
+<p>Efekti görmek için bir satırın üzerine mouse imlecinizi getirin</p>
+
+<table>
+  <tr>
+    <th>Ad</th>
+    <th>Soyad</th>
+    <th>Şehir</th>
+  </tr>
+  <tr>
+    <td>a</td>
+    <td>b</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>c</td>
+    <td>d</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>z</td>
+    <td>x</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>g</td>
+    <td>h</td>
+    <td>5</td>
+  </tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/i1rz8hu.png)
+
+### HTML Tablolarında Ortak Grup(Colgroup)
+
+`<colgroup>` elementi ile bazı kolonları ortak şekilde görünümünü değiştirebilirsiniz.
+
+Eğer ilk iki kolonu aynı görünüşte yapmak istiyorsak `<colgroup>` ve `<col>` elementlerini kullanırız.
+
+![Çıktı](https://i.hizliresim.com/3wafbgn.png)
+
+`<colgroup>` elementi, sütun özellikleri için bir kapsayıcı olarak kullanılmalıdır.
+
+Her grup bir `<col>` elementi ile belirtilir.
+
+`span` eklentisi ile kaç tane sütunun aynı özelliği alacağı belirtilir.
+
+`style` eklentisi ile sütüna verilecek özellikler belirtilir.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>HTML Tablolarında Ortak Grup(Colgroup)
+
+</h2>
+<p>Eğer ilk iki kolonu aynı görünüşte yapmak istiyorsak colgroup ve col elementlerini kullanırız.
+
+</p>
+
+<table style="width: 100%;">
+<colgroup>
+  <col span="2" style="background-color: #D6EEEE">
+</colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/76lf4oz.png)
+Legal CSS özellikleri çok azdır. <colgroup> ile birlikte kullanılabilecek Legal CSS özellikleri:
+
+- width
+
+- visibility
+
+- background
+
+- border
+
+### Çoklu <col> Elementi
+Farklı stillerle daha fazla sütuna farklı görünüm vermek istiyorsanız, `<colgroup>` sütunun içinde daha fazla `<col>` öğesi kullanın.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Çoklu <col> Elementi
+
+</h2>
+<p>Farklı stillerle daha fazla sütuna farklı görünüm vermek istiyorsanız, colgroup sütunun içinde daha fazla col öğesi kullanın.
+
+</p>
+
+<table style="width: 100%;">
+  <colgroup>
+    <col span="2" style="background-color: #D6EEEE">
+    <col span="3" style="background-color: pink">
+  </colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/1u0sfok.png)
+
+### Boş Colgroup
+Bir tablonun ortasındaki sütunlara stil vermek istiyorsak, önce sütunlar için "boş" bir `<col>` öğesi ekleriz.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Boş Colgroup
+
+</h2>
+<p>Bir tablonun ortasındaki sütunlara stil vermek istiyorsak, önce sütunlar için "boş" bir col öğesi ekleriz.
+
+</p>
+
+<table style="width: 100%;">
+<colgroup>
+  <col span="3">
+  <col span="2" style="background-color: pink">
+</colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/tkjl1h3.png)
+
+### Sütunları Saklamak
+Sütunları `visibility: collapse` özelliğiyle saklayabiliriz.
+```
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+
+<h2>Sütunları Saklamak
+
+</h2>
+<p>Sütunları visibility: collapse özelliğiyle saklayabiliriz.
+
+</p>
+
+<table style="width: 100%;">
+<colgroup>
+    <col span="2">
+    <col span="3" style="visibility: collapse">
+  </colgroup>
+<tr>
+<th>MON</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+<th>SAT</th>
+<th>SUN</th>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+</table>
+
+
+</body>
+</html>
+```
+![Çıktı](https://i.hizliresim.com/hntovpg.png)
+
+# Bölüm 9

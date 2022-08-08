@@ -440,14 +440,23 @@ CSS `text-align` özelliği, bir HTML öğesi için yatay metin hizalamasını t
 
 ## HTML Metin Formatları
 `<b>` - Bold text(kalın metin)
+
 `<strong>` - Important text(önemli metin)
+
 `<i>` - Italic text(italik metin)
+
 `<em>` - Emphasized text(vurgulanmış metin)
+
 `<mark>` - Marked text(işaretlenmiş metin)
+
 `<small>` - Smaller text(daha küçük metin)
+
 `<del>` - Deleted text(silinmiş metin)
+
 `<ins>` - Inserted text(eklenen metin)
+
 `<sub>` - Subscript text(alt simge metni)
+
 `<sup>` - Superscript text(üst simge metni)`
 
 Yukarıdaki formatların hepsini içeren bir örnek:

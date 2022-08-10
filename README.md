@@ -4532,4 +4532,249 @@ Aşağıdaki üç div öğesinin büyük ekranlarda yatay olarak görüntülenec
 </html>
 ```
 
+# Bölüm 12
 
+## HTML'de Bilgisayar Kodları
+HTML, kullanıcıdan alınan bilgiyi ve bilgisayar kodunu tanımlama için çeşitli elementleri içerir.
+Örnek:
+```
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Bilgisayar kodları</h2>
+<p>Bazı programlama kodları</p>
+
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+
+</body>
+</html>
+```
+## Klavyeden Girdi Almak - `<kbd>` Elementi
+`<kbd>` elementi klavyeden bir girdi almak için kullanılır. Alınan içerik tarayıcının varsayılan monospace fontunda görülür.
+![Çıktı](https://i.hizliresim.com/hwu0pr4.png)
+
+## Program Çıktısı - `<samp>` Elementi
+Bir bilgisayar programından çıktı elde etmek için `<samp>` elementi kullanılır. Programın içerisindeki içerik tarayıcı tarafından varsayılan olarak monospace fontunda verilir.
+![Çıktı](https://i.hizliresim.com/hurw7dv.png)
+
+## `<code>` Elementi
+`<code>` elementi, bir bilgisayar kodunu tanımlamak için kullanılır. İçindeki içerik, tarayıcının varsayılan monospace yazı tipinde görüntülenir.
+![Çıktı](https://i.hizliresim.com/7dhller.png)
+`<code>` elementinin fazladan boşluk ve satır sonlarını korumadığına dikkat edin. Bunu düzeltmek için `<code>` elementini bir `<pre>` öğesinin içine koyabilirsiniz.
+![Çıktı](https://i.hizliresim.com/5u7vh8f.png)
+
+## `<var>` Elementi
+HTML'de `<var>`elementi programlamada bir değişken tanımlarken kullandığımız variable ile aynı işlevi görür. İçerisindeki içerik italik şekilde gösterilir.
+![Çıktı](https://i.hizliresim.com/ov2824f.png)
+
+## Semantik Elementler nelerdir?
+Semantik Elementler nelerdir?
+
+Bir semantik element tarayıcıya ve geliştiriciye hangi amaçla kullanıldığını çok iyi şekilde açıklayan elementlerdir.
+
+Semantik olmayan elementlere örnek verecek olursak: `<div>` ve `<span>` (İçerik hakkında bir bilgi vermiyorlar)
+
+Semantik elementlere örnek verecek olursak: `<form>,<table> ve <article>` (Anlaşılır şekilde içeriği tanımlar)
+
+### HTML'de Semantik elementler nelerdir?
+![Semantik](https://i.hizliresim.com/dy4owto.png)
+
+## '<section>' Elementi
+
+'<section>' elementi bir dökümandaki bir kısımı tanımlamak için kullanılır.
+Bu elementin nerelerde kullanılabileceğine yönelik örnekler:
+- Bölümler(Chapters)
+- Giriş(Introduction)
+- Haber Öğeleri
+- İletişim Bilgileri(Contact Info)
+
+Bir web sayfası giriş, içerik ve iletişim bilgileri için bölümlere ayrılabilir.
+
+Örnek:
+```
+<section>
+<h1>TürkHackTeam</h1>
+<p>Türkiye'nin en büyük siber güvenlik platformu. Bu içerik vancoondehni(Aziz) tarafından THT için hazırlanmıştır.</p>
+</section>
+
+<section>
+<h1>İletişim</h1>
+<p>Github - kartalaziz.</p>
+</section>
+```
+## `<article>` Elementi
+
+`<article>` elementi bağımsız, kendi kendine yeten bir içeriği tanımlarken kullanılır.
+
+`<article>` elementinin kullanıldığı yerler:
+- Forum postlarında
+- Blog postlarında
+- Kullanıcı yorumlarında
+- Ürün kartlarında
+- Gazete haberlerinde
+
+Örnek:
+```
+<article>
+<h2>Google Chrome</h2>
+<p>Chrome 2008 yılında Google tarafından geliştirilmiş olan bir tarayıcıdır.</p>
+</article>
+
+<article>
+<h2>Mozilla Firefox</h2>
+<p>Firefox Mozilla şirketi tarafından geliştirilmiş olan bir tarayıcıdır..</p>
+</article>
+```
+!Önemli! `<article>` elementi kendi kendine yeten, bağımsız bir elementtir. Bu elementi `<section>` elementinin içerisinde kullanamayız.
+
+## `<header>` Elementi
+
+`<header>` elementi, tanıtım içeriği için bir dizi gezinme bağlantısını temsil eder.
+Bir <header> elementi tipik olarak aşağıdakileri içerir:
+- Bir veya daha fazla heading elementi`(<h1>-<h6>)`
+- Logo veya ikon
+- Yazar bilgisi
+
+NOT: Bir HTML dökümanında birden fazla `<header>` elementine sahip olabilirsiniz. Ancak `<header>` elementi `<footer>`,`<address>` veya başka bir `<header>` elementi içerisinde bulunamaz.
+
+Örnek:
+```
+<article>
+  <header>
+    <h1>THT</h1>
+    <p>THT Türkiye'nin en büyük siber güvenlik platformu</p>
+  </header>
+  <p>THT faydalı içerikler üreten ekipleri barındıran ve gelişime odaklanan bir forumdur.</p>
+</article>
+```
+## `<footer>` Elementi
+`<footer>` elementi bir döküman veya bölüm için bir footer(altbilgi) tanımlamak için kullanılır.
+Bir `<footer>` elementi tipik olarak aşağıdakileri içerir:
+- Yazar bilgisi
+- Copyright bilgisi
+- İletişim bilgisi
+- Site haritası
+- En iyi bağlantılara dön
+- İlgili dökümanlar
+
+Bir dökümanda birkaç `<footer>` elementine sahip olabilirsiniz.
+
+Örnek:
+```
+<footer>
+  <p>Yazar: Aziz</p>
+  <p><a href="mailto:bilmemnde@bilmemsi.com">bilmemne.com</a></p>
+</footer>
+```
+
+## `<nav>` Elementi
+`<nav>` elementi bir navigasyon bağlantısı tanımlamak için kullanılır.
+Örnek:
+```
+<nav>
+  <a href="/html/">HTML</a> |
+  <a href="/css/">CSS</a> |
+  <a href="/js/">JavaScript</a> |
+  <a href="/jquery/">jQuery</a>
+</nav>
+```
+## `<aside>` Elementi
+`<aside>` elementi yerleştirildiği içeriğin dışında bazı içerikleri tanımlar (kenar çubuğu gibi)
+`<aside>` elementi içeriği, çevreleyen içerikle dolaylı olarak ilişkili olmalıdır.
+```
+<html>
+<head>
+<style>
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+}
+</style>
+</head>
+<body>
+
+<p>THT</p>
+
+<aside>
+<p> Yazar: vancoondehni(Aziz).</p>
+</aside>
+
+<p>GreenTeam</p>
+<p> HTML Öğrenelim Serisi </p>
+
+</body>
+</html>
+```
+## `<figure>` ve `<figcaption>` Elementleri
+`<figure>` elementi, çizimler, diyagramlar, fotoğraflar, kod listeleri gibi bağımsız içerikleri belirtir.
+`<figcaption>` elementi, bir `<figure>` elementi için bir resim yazısı tanımlar.
+`<img>` elementi gerçek görüntüyü/illüstrasyonu tanımlar.
+
+Örnek:
+```
+<figure>
+  <img src="pic_trulli.jpg" alt="Trulli">
+  <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
+</figure>
+```
+## HTML'de Stil Önerileri
+- Bir dökümanda her zaman dökümanın tipini belirtin.
+Örneğin:
+`<!DOCTYPE html>`
+
+- Element isimlerinde küçük harfleri kullanın. (HTML case sensitive değildir bu sebeple `<b>` veya `<B>` aynı işlevi görür fakat görünüm açısından küçük harfleri kullanmak daha faydalıdır.)
+
+- HTML'de tüm elementleri kapatmak zorunda değilsiniz. Örneğin <p> elementini kapatmanıza gerek yok. Fakat kapatmanız daha iyi olacaktır.
+
+- Görseller için her zaman alt,width ve height özelliğini belirtin.
+
+- `<title>` elementini eklemeyi asla unutmayın. (SEO sıralamanız için çok önemli bir nokta)
+
+- Her zaman lang özelliğini kullanarak web sayfasının dilini belirtiniz. Arama motorları ve tarayıcılar için önemli bir nokta.
+
+- Meta data(Doğru arama motoru indeksini yakalamak için metadata tanımlamasını kullanın)
+
+- Viewportu ayarlama(Farklı cihazlarda sitenin görünümününün bozulmaması için bu özelliği kullanın.)
+
+## HTML Entities
+Reserved karakterler olarak adlandırılan karakterler vardır. `>` ve `<` gibi
+
+Tarayıcılar bu işaretleri etiketlerle karıştırabilir.
+
+Bundan kaçınmak için `<` işareti yerine `&lt;` veya `&#60` ifadesini kullanmalıyız.
+
+Bazı reserved karakterler:
+![Reserved](https://i.hizliresim.com/n4pyr5q.png)
+## HTML'de Semboller
+Çoğu matematiksel, teknik ve para birimi simgesi normal bir klavyede bulunmaz. HTML sayfasına bu tür semboller eklemek için entity adını veya entity numarasını kullanabilirsiniz.
+
+Örnek:
+![Örnek](https://i.hizliresim.com/2ls46tm.png)
+
+### HTML Tarafından Desteklenen Bazı Matematiksel Semboller
+Tam liste: https://www.w3schools.com/charsets/ref_utf_math.asp
+
+Ok işaretleri: https://www.w3schools.com/charsets/ref_utf_arrows.asp
+Para birimi işaretleri: https://www.w3schools.com/charsets/ref_utf_currency.asp
+Diğer işaretler: https://www.w3schools.com/charsets/ref_utf_symbols.asp
+
+## HTML'de Emojiler
+Emojiler UTF-8 karakter setleridir.
+UTF_8 neredeyse tüm karakterleri ve sembolleri içerir.
+
+## charset Özelliği
+Bir HTML sayfasının doğru şekilde çıktı verebilmesi için tarayıcının sayfada kullanılan karakter setlerini bilmesi gerekir. Bunu için `<meta>` etiketinde kullanılan karakter seti belirtilir.
+Örneğin: `<meta charset="UTF-8">`
+
+Tüm emojilerin listesi: https://www.w3schools.com/charsets/ref_emoji.asp
+
+# Bölüm 13

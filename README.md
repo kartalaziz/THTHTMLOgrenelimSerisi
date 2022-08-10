@@ -4584,9 +4584,11 @@ Semantik elementlere örnek verecek olursak: `<form>,<table> ve <article>` (Anla
 ### HTML'de Semantik elementler nelerdir?
 ![Semantik](https://i.hizliresim.com/dy4owto.png)
 
+
 ## '<section>' Elementi
 
 '<section>' elementi bir dökümandaki bir kısımı tanımlamak için kullanılır.
+
 Bu elementin nerelerde kullanılabileceğine yönelik örnekler:
 - Bölümler(Chapters)
 - Giriş(Introduction)

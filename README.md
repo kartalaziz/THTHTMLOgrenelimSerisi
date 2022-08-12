@@ -4780,3 +4780,452 @@ Bir HTML sayfasının doğru şekilde çıktı verebilmesi için tarayıcının 
 Tüm emojilerin listesi: https://www.w3schools.com/charsets/ref_emoji.asp
 
 # Bölüm 13
+## HTML'de Formlar
+Bir HTML formu kullanıcıdan girdi almak için kullanılır. Kullanıcıdan alınan girdi işlem için genellikle bir sunucuya gönderilir.
+
+## `<form>` Elementi
+`<form>` elementi, kullanıcı girişi için bir HTML formu oluşturmak amacıyla kullanılır.
+`<form>` elementi, metin alanları, onay kutuları, radyo düğmeleri, gönder düğmeleri gibi farklı giriş elementleri için bir kapsayıcıdır.
+Tüm form elementlerinin listesini incelemek için: [HTML Form Elements](https://www.w3schools.com/html/html_form_elements.asp)
+```
+<form>
+.
+form elements
+.
+</form>
+```
+## `<input>` Elementi
+`<input>` elementi en sık kullanılan elementlerden birisidir.
+Bir `<input>` elementi, type niteliğine bağlı olarak birçok şekilde görüntülenebilir.
+![Input](https://i.hizliresim.com/h4e1xoh.png)
+Tüm type niteliklerinin listesi: [HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
+```
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+```
+Örnek:
+```
+<form>
+  <label for="fname">İsim</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Soyisim</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+```
+## `<label>` Elementi
+`<label>` etkiketi bir sürü element için etiket tanımlar.
+`<label>` etiketi, ekran okuyucu kullanıcıları için kullanışlıdır, çünkü kullanıcı giriş öğesine odaklandığında ekran okuyucu etiketi yüksek sesle okuyacaktır.
+`<label>` etiketinin for özelliği <input> etiketinin id özelliğine eşit olmalıdır.
+
+## Radyo Butonları
+`<input type="radio">` bir radyo düğmesini tanımlar.
+Radyo butonları, kullanıcının sınırlı sayıda seçenek arasından birisini seçmesine olanak tanır.
+Örnek:
+```
+<p>Favori Web geliştirme dilinizi seçin:</p>
+
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form>
+```
+## Onay Kutuları(Checkboxes)
+`<input type="checkbox">` bir onay kutusu tanımlar.
+
+Onay kutuları, kullanıcının sınırlı sayıda seçenek arasından 0 veya daha fazla seçeneği seçmesine olanak tanır.
+Örnek:
+```
+<form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> Araba kullanmayı severim. </label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> Motorbisiklet kullanmayı severim. </label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> Bisiklet kullanmayı severim. </label>
+</form>
+```
+## Submit Butonu
+`<input type="submit">`, form verilerini form işleyiciye göndermek için bir düğme tanımlar.
+Form işleyici, giriş verilerini işlemek için bir komut dosyası içeren sunucudaki bir dosyadır.
+Form işleyicisi, formun action özelliğinde belirtilir.
+Örnek:
+```
+<form action="/action_page.php">
+  <label for="fname">İsim</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Soyisim</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+```
+## `<input>` elementi için name özelliği
+Her input'un, gönderilecek bir name özniteliğine sahip olması gerektiğine dikkat edin.
+name özelliği atlanırsa, giriş alanının değeri hiç gönderilmeyecektir.
+
+## Action Özelliği
+action özelliği form gönderildiğinde gerçekleştirilecek eylemi tanımlar. Genellikle form verisi bir sunucudaki dosyaya gönderilir.
+Örnek:
+```
+<form action="/action_page.php">
+  <label for="fname">AD</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">SOYAD</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+```
+## Target Özelliği
+Target özelliği, formu gönderdikten sonra alınan yanıtın nerede görüntüleneceğini belirtir.
+Target özelliği aşağıdaki değerlerden birine sahip olabilir:
+![targetözelliği](https://i.hizliresim.com/olayo10.png)
+
+## Method Özelliği
+Method özelliği, form verileri gönderilirken kullanılacak HTTP yöntemini belirtir.
+Form verileri, URL değişkenleri `(method="get")` veya HTTP sonrası işlem `(method="post")` olarak gönderilebilir.
+Form verilerini gönderirken varsayılan HTTP yöntemi get'dir.
+Örnek:
+`<form action="/action_page.php" method="get">`
+
+### GET ile ilgili notlar:
+-Form verilerini ad/değer çiftlerinde URL'ye ekler
+-Hassas verileri göndermek için asla GET'i kullanmayın! (gönderilen form verileri URL'de görünür!)
+-Bir URL'nin uzunluğu sınırlıdır (2048 karakter)
+-Bir kullanıcının sonucu işaretlemek istediği form gönderimleri için kullanışlıdır
+-GET, Google'daki sorgu dizeleri gibi güvenli olmayan veriler için iyidir
+
+### POST ile ilgili notlar:
+-Form verilerini HTTP isteğinin gövdesine ekler (gönderilen form verileri URL'de gösterilmez)
+-POST'un boyut sınırlaması yoktur ve büyük miktarda veri göndermek için kullanılabilir.
+-POST içeren form gönderimleri işaretlenemez
+
+-Öneri: Veri kişisel bilgi veya hassas bilgi içeriyorsa her zaman post ile gönderin.
+
+## Autocomplete Özelliği
+autocomplete özelliği, bir formun otomatik tamamlamanın açık mı yoksa kapalı mı olması gerektiğini belirtir.
+Otomatik tamamlama açık olduğunda, tarayıcı, kullanıcının daha önce girdiği değerlere göre değerleri otomatik olarak tamamlar.
+Örnek:
+`<form action="/action_page.php" autocomplete="on">`
+
+## Novalidate Özelliği
+novalidate özelliği bir boole özelliğidir.
+Mevcut olduğunda, form verilerinin (girdi) gönderildiğinde doğrulanmaması gerektiğini belirtir.
+Örnek:
+`<form action="/action_page.php" novalidate>`
+
+Tüm Form Özelliklerinin Listesi:
+![Çıktı](https://i.hizliresim.com/ltquhvo.png)
+
+## HTML Input Özellikleri
+
+### value Özelliği
+value niteliği, bir giriş alanı için bir başlangıç değeri belirtir.
+Örnek:
+```
+<form>
+  <label for="fname">ad</label><br>
+  <input type="text" id="fname" name="fname" value="mahmut"><br>
+  <label for="lname">soyad</label><br>
+  <input type="text" id="lname" name="lname" value="dede">
+</form>
+```
+### readonly Özelliği
+readonly özelliği, bir girdi alanının salt okunur olduğunu belirtir.
+Salt okunur bir giriş alanı değiştirilemez (ancak, bir kullanıcı üzerine gelebilir, onu vurgulayabilir ve içindeki metni kopyalayabilir).
+Form gönderilirken salt okunur bir giriş alanının değeri gönderilecektir!
+Örnek:
+```
+<form>
+  <label for="fname">ad:</label><br>
+  <input type="text" id="fname" name="fname" value="ada" readonly><br>
+  <label for="lname">soyad</label><br>
+  <input type="text" id="lname" name="lname" value="can">
+</form>
+```
+
+### disabled Özelliği
+disabled özelliği, bir giriş alanının devre dışı bırakılması gerektiğini belirtir.
+Devre dışı bırakılmış bir giriş alanı kullanılamaz ve tıklanamaz.
+Formu gönderirken devre dışı bırakılmış bir giriş alanının değeri gönderilmeyecektir!
+
+### size Özelliği
+size özelliği, bir giriş alanının karakter cinsinden görünür genişliğini belirtir.
+Varsayılan genişlik 20'dir.
+Örnek:
+```
+<form>
+  <label for="fname">ad</label><br>
+  <input type="text" id="fname" name="fname" size="50"><br>
+  <label for="pin">PIN:</label><br>
+  <input type="text" id="pin" name="pin" size="4">
+</form>
+```
+### maxlength Özelliği
+maxlenght özelliği, bir giriş alanında izin verilen maksimum karakter sayısını belirtir.
+
+Not: Bir maksimum uzunluk ayarlandığında, giriş alanı belirtilen sayıda karakterden fazlasını kabul etmeyecektir. Ancak bu özellik herhangi bir geri bildirim sağlamaz. Yani kullanıcıyı uyarmak istiyorsanız Js kodu yazmalısınız.
+Örnek:
+```
+<form>
+  <label for="fname">ad:</label><br>
+  <input type="text" id="fname" name="fname" size="50"><br>
+  <label for="pin">PIN:</label><br>
+  <input type="text" id="pin" name="pin" maxlength="4" size="4">
+</form>
+```
+### min ve max Özellikleri
+min ve max özellikleri, bir giriş alanı için minimum ve maksimum değerleri belirtir.
+Min ve max özellikleri şu giriş türleriyle çalışır: sayı, aralık, tarih, yerel tarih-saat, ay, saat ve hafta.
+Örnek:
+```
+<form>
+  <label for="datemax">01.01.1998'den önce bir tarih giriniz</label>
+  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+
+  <label for="datemin">01.01.2000'den sonra bir tarih giriniz.</label>
+  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+
+  <label for="quantity">Sıklık (1 ile 5 arasında bir değer giriniz)</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5">
+</form>
+```
+### multiple Özelliği
+multiple özelliği, kullanıcının bir giriş alanına birden fazla değer girmesine izin verildiğini belirtir.
+multiple özelliği e-posta ve dosya giriş türleriyle çalışır.
+Örnek:
+```
+<form>
+  <label for="files">Dosya seçiniz</label>
+  <input type="file" id="files" name="files" multiple>
+</form>
+```
+### pattern Özelliği
+pattern özelliği, form gönderildiğinde giriş alanının değerinin kontrol edildiği normal bir ifadeyi belirtir.
+pattern özelliği şu giriş türleriyle çalışır: metin, tarih, arama, url, tel, e-posta ve parola.
+Örnek:
+```
+<form>
+  <label for="country_code">Ülke kodu</label>
+  <input type="text" id="country_code" name="country_code"
+  pattern="[A-Za-z]{3}" title="Three letter country code">
+</form>
+```
+### placeholder Özelliği
+placeholder özelliği, bir girdi alanının beklenen değerini açıklayan kısa bir ipucu belirtir.
+Kısa ipucu, kullanıcı bir değer girmeden önce giriş alanında görüntülenir.
+placeholder özelliği şu giriş türleriyle çalışır: metin, arama, url, tel, e-posta ve parola.
+Örnek:
+```
+<form>
+  <label for="phone">Telefon numarası giriniz</label>
+  <input type="tel" id="phone" name="phone"
+  placeholder="123-45-678"
+  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+</form>
+```
+### required Özelliği
+required özelliği, formu göndermeden önce bir girdi alanının doldurulması gerektiğini belirtir.
+required özelliği şu giriş türleriyle çalışır: metin, arama, url, tel, e-posta, parola, tarih seçiciler, numara, onay kutusu, radyo ve dosya.
+Örnek:
+```
+<form>
+  <label for="username">Kullanıcı adı</label>
+  <input type="text" id="username" name="username" required>
+</form>
+```
+### step Özelliği
+step özelliği, bir giriş alanı için yasal sayı aralıklarını belirtir.
+Örnek: step="3" ise yasal sayılar -3, 0, 3, 6 vb. olabilir.
+step özelliği şu giriş türleriyle çalışır: sayı, aralık, tarih, yerel tarih-saat, ay, saat ve hafta.
+Örnek:
+```
+<form>
+  <label for="points">Puanlar</label>
+  <input type="number" id="points" name="points" step="3">
+</form>
+```
+### autofocus Özelliği
+autofocus özelliği, sayfa yüklendiğinde bir giriş alanının otomatik olarak odaklanması gerektiğini belirtir.
+Örnek:
+```
+<form>
+  <label for="fname">ad</label><br>
+  <input type="text" id="fname" name="fname" autofocus><br>
+  <label for="lname">soyad</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+```
+### height ve width Özellikleri
+height ve width özellikleri bir `<input type="image">` öğesinin yüksekliğini ve genişliğini belirtir.
+Örnek:
+```
+<form>
+  <label for="fname">ad</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">soyad</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+</form>
+```
+### list Özelliği
+list özelliği bir `<input>` öğesi için önceden tanımlanmış seçenekleri içeren bir `<datalist>` öğesine başvurur.
+Örnek:
+```
+<form>
+  <input list="browsers">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+</form>
+```
+### autocomplete Özelliği
+autocomplete özelliği, bir formun veya bir giriş alanının otomatik tamamlamanın açık mı yoksa kapalı mı olması gerektiğini belirtir.
+Bir kullanıcı bir alana yazmaya başladığında, tarayıcı, daha önce yazılan değerlere göre alanı doldurma seçeneklerini göstermelidir.
+autocomplete özelliği `<form>` ve şu `<input>` türleriyle çalışır: metin, arama, url, tel, e-posta, parola, tarih seçiciler, aralık ve renk.
+Örnek:
+```
+<form action="/action_page.php" autocomplete="on">
+  <label for="fname">ad</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">soyad</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">mail</label>
+  <input type="email" id="email" name="email" autocomplete="off"><br><br>
+  <input type="submit" value="Submit">
+</form>
+```
+### `<input>` elementi için farklı form* özellikleri
+
+form Özelliği
+form özelliği, `<input>` öğesinin ait olduğu formu belirtir.
+Bu özelliğin değeri, ait olduğu `<form>` öğesinin id'sine eşit olmalıdır.
+```
+<form action="/action_page.php" id="form1">
+  <label for="fname">ad</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<label for="lname">soyad</label>
+<input type="text" id="lname" name="lname" form="form1">
+```
+
+### formaction Özelliği
+formaction özelliği, form gönderildiğinde girişi işleyecek dosyanın URL'sini belirtir.
+Not: Bu özellik, `<form>` öğesinin action özelliğini geçersiz kılar.
+Formaction özelliği şu giriş türleriyle çalışır: gönder ve resim.
+```
+<form action="/action_page.php">
+  <label for="fname">ad</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">soyad</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+</form>
+```
+### formenctypte Özelliği
+formenctype özelliği, gönderildiğinde form verilerinin nasıl kodlanması gerektiğini belirtir (yalnızca `method="post"` içeren formlar için).
+formenctype özelliği şu giriş türleriyle çalışır: gönder ve resim.
+```
+<form action="/action_page_binary.asp" method="post">
+  <label for="fname">ad:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formenctype="multipart/form-data"
+  value="Submit as Multipart/form-data">
+</form>
+```
+### formmethod Özelliği
+formmethod özelliği, eylem URL'sine form verilerini göndermek için HTTP yöntemini tanımlar.
+formmethod özelliği şu giriş türleriyle çalışır: gönder ve resim.
+
+### formtarget Özelliği
+formtarget özelliği, formu gönderdikten sonra alınan yanıtın nerede görüntüleneceğini belirten bir ad veya anahtar sözcük belirtir.
+formtarget özelliği şu giriş türleriyle çalışır: gönder ve resim.
+```
+<form action="/action_page.php">
+  <label for="fname">ad:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">soyad:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+</form>
+```
+### formnovalidate Özelliği
+formnovalidate özelliği, bir `<input>` öğesinin gönderildiğinde doğrulanmaması gerektiğini belirtir.
+formnovalidate özelliği şu giriş türleriyle çalışır: gönder.
+```
+<form action="/action_page.php">
+  <label for="email">Mail giriniz:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formnovalidate="formnovalidate"
+  value="Submit without validation">
+</form>
+```
+### novalidate Özelliği
+novalidate, tüm form verilerinin gönderildiğinde doğrulanmaması gerektiğini belirtir.
+```
+<form action="/action_page.php" novalidate>
+  <label for="email">Mail adresinizi giriniz:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <input type="submit" value="Submit">
+</form>
+```
+## HTML'de Canvas Grafikleri
+`<canvas>` elementi, bir web sayfasında grafik çizmek için kullanılır.
+`<canvas>` elementi, JavaScript aracılığıyla anında grafik çizmek için kullanılır.
+`<canvas>` elementi yalnızca grafikler için bir kapsayıcıdır.
+Canvas, yollar, kutular, daireler, metin çizmek ve resim eklemek için çeşitli yöntemlere sahiptir.
+Canvas, bir HTML sayfasındaki dikdörtgen bir alandır. Varsayılan olarak, bir canvasın kenarlığı ve içeriği yoktur.
+Örnek:
+`<canvas id="myCanvas" width="200" height="100"></canvas>`
+
+## HTML'de SVG Grafikleri
+SVG, Ölçeklenebilir Vektör Grafikleri anlamına gelir.
+Web için grafikleri tanımlamak için kullanılır.
+
+### `<svg>` Elementi
+`<svg>` elementi, SVG grafikleri için bir kapsayıcıdır.
+
+SVG'nin yollar, kutular, daireler, metin ve grafik görüntüleri çizmek için çeşitli yöntemleri vardır.
+
+## SVG ve Canvas Arasındaki Farklar
+SVG, XML'de 2D(2 boyutlu) grafikleri tanımlamak için kullanılan bir dildir.
+
+Canvas anında (JavaScript ile) 2D grafikler çizer.
+
+SVG, XML tabanlıdır; bu, her elementin SVG DOM içinde mevcut olduğu anlamına gelir.
+
+SVG'de çizilen her şekil bir nesne olarak hatırlanır. Bir SVG nesnesinin özelliği değiştirilirse, tarayıcı şekli otomatik olarak yeniden oluşturabilir.
+
+Canvas, piksel piksel işlenir. Canvasda, grafik çizildikten sonra tarayıcı tarafından unutulur. Konumunun değiştirilmesi gerekiyorsa, grafiğin kapsadığı nesneler de dahil olmak üzere tüm sahnenin yeniden çizilmesi gerekir.

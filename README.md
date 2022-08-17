@@ -5229,3 +5229,255 @@ SVG, XML tabanlıdır; bu, her elementin SVG DOM içinde mevcut olduğu anlamın
 SVG'de çizilen her şekil bir nesne olarak hatırlanır. Bir SVG nesnesinin özelliği değiştirilirse, tarayıcı şekli otomatik olarak yeniden oluşturabilir.
 
 Canvas, piksel piksel işlenir. Canvasda, grafik çizildikten sonra tarayıcı tarafından unutulur. Konumunun değiştirilmesi gerekiyorsa, grafiğin kapsadığı nesneler de dahil olmak üzere tüm sahnenin yeniden çizilmesi gerekir.
+
+# Bölüm 14
+
+## HTML'de Medya
+### Video
+`<video>` elementi web sayfasında bir video yayınlamak için kullanılır.
+Kullanım şekli:
+```
+<body>
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+</video>
+
+```
+Bir videoyu otomatik olarak oynatmak için autoplay özelliği kullanılır.
+Kullanım şekli:
+```
+<body>
+
+<video width="320" height="240" autoplay>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+
+</video>
+
+</body>
+
+```
+Otomatik oynatırken sessizde başlamasını istiyorsanız muted etiketini kullanmalısınız.
+Örnek kullanım:
+```
+<video width="320" height="240" autoplay muted>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+</video>
+
+```
+### Audio
+HTML'de bir ses dosyasını bir web sayfasında kullanabilmek için <audio> `elementi` kullanılır.
+```
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+</audio>
+```
+Bir ses dosyasını otomatik olarak oynatabilmek için autoplay özelliği kullanılır.
+```
+<audio controls autoplay>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+</audio>
+```
+### Plug-in(Eklenti)
+Eklentiler, tarayıcının standart işlevselliğini genişleten bilgisayar programlarıdır.
+Eklentiler birçok amaç için üretilebilir.
+Örneğin:
+- Microsoft ActiveX kontrollerini kullanabilllmek için
+- Haritaları göstermek için
+- Virüsleri taramak için
+- Banka ID'sini onaylamak için
+
+### `<object>` Elementi
+Bu element tüm tarayıcılar tarafından desteklenir.
+Bu element HTML dökümanına gömülmüş bir elementi tanımlar.
+Bu element web sayfalarına eklentileri gömmek için kullanılır.
+Örnek kullanım:
+```
+<body>
+
+<object width="100%" height="500px" data="snippet.html"></object>
+ 
+</body>
+```
+### `<embed>` Elementi
+Büyük tarayıcılar tarafından desteklenen bir elementtir.
+Örnek kullanım:
+```
+<body>
+
+<embed src="audi.jpeg">
+
+</body>
+```
+`<embed>` elementi bitiş etiketine gerek duymaz.
+
+#### HTML'de Youtube Videoları
+Örnek kullanım:
+```
+<body>
+
+<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+</body>
+```
+Youtube otomatik oynatma ve mute:
+```
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+</iframe>
+```
+## HTML'de API
+### HTML Geolocation API
+Bir kullanıcının konumunu belirlemek için kullanılır.
+`getCurrentPosition()` ifadesi kullanılır.
+Kullanım şekli:
+```
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+```
+Kullanıcıdan konumunu alırken error kısmını halledebilecek kullanım:
+```
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+```
+### HTML Drag and Drop API
+Herhangi bir HTML elementi drop edilebilir veya drag edilebilir.
+Örnek kullanım:
+```
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+</body>
+</html>
+```
+Bir elementi Draggable yapma:
+`<img draggable="true">`
+
+`ondragover` elementi bir elementi nereye taşıyabileceğmizi belirtirken kullanılır.
+`event.preventDefault()`
+
+### HTML'de Web Storage API
+Web storage ile birlikte, web uygulamaları veriyi kullanıcının tarayıcısında lokal olarak depolayabilir.
+
+Web Storage Nesneleri
+`window.localStorage` - stores data with no expiration date
+`window.sessionStorage` - stores data for one session (data is lost when the browser tab is closed)
+Web storage'ı kullanmadan önce tarayıcıda`localStorage` ve `sessionStorage` kontrol edilir.
+```
+if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+} else {
+  // Sorry! No Web Storage support..
+}
+```
+
+#### `localStorage` Nesnesi
+`localStorage` nesnesi veriyi son kullanım tarihi olmadan saklarken kullanılır. Veri tarayıcı kapatıldığında da silinmez ve sonraki gün, ay veya yıl için de saklı kalır.
+Örnek:
+```
+// Store
+localStorage.setItem("lastname", "Smith");
+
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+```
+Aşağıdaki kullanımda kullanıcının butona kaç kez tıkladığını sayar:
+```
+if (localStorage.clickcount) {
+  localStorage.clickcount = Number(localStorage.clickcount) + 1;
+} else {
+  localStorage.clickcount = 1;
+}
+document.getElementById("result").innerHTML = "You have clicked the button " +
+localStorage.clickcount + " time(s).";
+```
+#### `sessionStorage` Nesnesi
+`sessionStorage` öğesi veriyi sekme kapanana kadar saklar. Kullanıcı tab'ı kapattığında veriler silinir.
+
+Aşağıdaki kullanımda kullanıcın butona kaç kez tıkladığı(sadece mevcut sekmede) sayar:
+```
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+</head>
+<body>
+
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+
+</body>
+```
+### HTML'de Web Workers API

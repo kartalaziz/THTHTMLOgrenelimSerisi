@@ -5481,3 +5481,5 @@ function clickCounter() {
 </body>
 ```
 ### HTML'de Web Workers API
+https://www.w3schools.com/html/html5_webworkers.asp
+https://www.w3schools.com/html/html5_serversentevents.asp
